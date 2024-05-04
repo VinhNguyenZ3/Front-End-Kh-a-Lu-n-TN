@@ -1,0 +1,386 @@
+/* All Product */
+.collection-layout .collection-header {
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+.collection-layout .collection-body {
+  background: #fff;
+  border-radius: 4px;
+}
+.collection-layout .collection-filter {
+  padding: 24px;
+}
+.collection-layout .collection-filter .filter-wrap {
+  position: relative;
+  display: flex;
+}
+.collection-layout .collection-filter .filter-total {
+  margin-right: 8px;
+}
+/* Begin Modal */
+.collection-layout .collection-filter .filter-total .filter-total--content.active {
+    display: block;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content {
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    border-radius: 4px 4px 0 0;
+    max-height: 70vh;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: normal;
+    z-index: 14;
+    overflow-y: auto;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content-head {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 16px 10px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content-head .filter-tags-btn {
+    width: 85px;
+    position: relative;
+    text-align: right;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content-head .filter-tags-btn {
+    width: 85px;
+    position: relative;
+    text-align: right;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content-head .filter-tags-btn .filter-btn-close {
+    background-color: #fff;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 10px;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    margin-left: auto;
+}
+.collection-layout .collection-filter .filter-total .filter-total--content-head .filter-tags-btn .filter-btn-close svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.collection-layout .collection-filter .filter-total .filter-total--content-body .list-filter--main {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0 6px 16px;
+}
+.collection-layout .collection-filter .filter-total .filter-group {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 10px;
+}
+.collection-layout .collection-filter .filter-group .filter-group--block {
+    position: relative;
+}
+.collection-layout .collection-filter .filter-total .filter-group .filter-group--title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    gap: 10px 8px;
+    padding-right: 2px;
+    overflow-y: auto;
+    max-height: 220px;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul li {
+    padding-left: 0;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul li input[type="radio"], .collection-layout .collection-filter .filter-group .filter-group--content ul li input[type="checkbox"] {
+    display: none;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul li label {
+    padding: 7px 10px;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    font-weight: 400;
+    width: 100%;
+}
+
+
+.collection-layout .collection-filter .filter-total .range-slider {
+    margin: 5px 0 10px 0;
+}
+.collection-layout .collection-filter .filter-total .line {
+    -ms-flex: 0 0 calc(100% - 20px);
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    margin: auto;
+    height: 1px;
+    background: #CFCFCF;
+}
+.collection-layout .collection-filter .range-slider .noUi-horizontal {
+    height: 4px;
+    border: none;
+    background: #ECECEC;
+}
+
+.collection-layout .collection-filter .filter-single .filter-group--content {
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: auto;
+    left: 0;
+    top: 125%;
+    position: absolute;
+    z-index: 100;
+    padding: 16px 16px 0;
+    /* display: none; */
+    min-width: 560px;
+    max-width: 900px;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    gap: 10px 8px;
+    padding-right: 2px;
+    overflow-y: auto;
+    max-height: 220px;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul li {
+    padding-left: 0;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+.collection-layout .collection-filter .filter-group .filter-group--content ul li.active label,
+ .collection-layout .collection-filter .filter-group .filter-group--content ul li:hover label {
+    background: #ffffff;
+    border: 1px solid #1982F9;
+    color: #1982F9;
+    font-weight: 600;
+}
+
+
+
+
+.collection-layout .collection-filter .filter-control {
+    padding: 12px 10px;
+}
+.collection-layout .collection-filter .filter-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 4px 4px;
+    bottom: 0;
+    margin: 0;
+    position: sticky;
+    z-index: 2;
+}
+.collection-layout .collection-filter .filter-single .filter-button--single {
+    background-color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    margin: 16px -16px 0;
+    padding: 8px 10px;
+    text-align: center;
+}
+.collection-layout .collection-filter .filter-control .filter-button .unselect {
+    border-radius: 4px;
+    border: 1px solid var(--maincolor);
+    color: var(--maincolor);
+    display: inline-block;
+    line-height: 14px;
+    padding: 10px 0;
+    text-align: center;
+    width: 140px;
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.collection-layout .collection-filter .filter-control .filter-button .unselect.active ,
+.collection-layout .collection-filter .filter-control .filter-button .apply.active {
+    opacity: 1;
+    pointer-events: initial;
+}
+.collection-layout .collection-filter .filter-control .filter-button .apply {
+    background-color: #2485f6;
+    color: #fff;
+}
+.collection-layout .collection-filter .filter-control .filter-button .apply {
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 14px;
+    padding: 10px 0;
+    text-align: center;
+    width: 140px;
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.collection-layout .collection-filter .filter-control .filter-button .apply span {
+    display: none;
+    width: 22px;
+    transition: all .25s ease;
+}
+/* End Modal */
+.collection-layout .filter-total .filter-total--title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4px 10px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+}
+.collection-layout .collection-filter .filter-total .filter-total--title svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 9px;
+  fill: #ffffff;
+}
+/* .collection-layout .collection-filter 
+  .filter-total .filter-total--content {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 900px;
+    max-width: 900px;
+    max-height: 85vh;
+    min-width: 382px;
+    position: absolute;
+    top: 45px;
+    right: auto;
+    bottom: auto;
+    z-index: 10;
+  } */
+/* .collection-layout .collection-filter .filter-total .filter-total--content-head {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 16px 10px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+  } */
+.collection-layout .collection-filter .filter-single {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.collection-layout .collection-filter .filter-single .list-filter--main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.collection-layout .collection-filter .filter-single .filter-group--title {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 36px;
+  padding: 4px 28px 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+.collection-layout
+  .collection-filter
+  .filter-single
+  .filter-group--title:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 0;
+  right: 11px;
+  margin: auto;
+  border-style: outset;
+  border-width: 4px;
+  border-color: #000 transparent transparent transparent;
+  display: inline-block;
+  border-radius: 1px;
+}
+.collection-layout .collection-sortby {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.collection-layout .collection-sortby .sortby-control {
+  position: relative;
+}
+
+.collection-layout .collection-sortby .listbox__button {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 5px 29px 5px 11px;
+  width: 100%;
+  background: transparent;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+.collection-layout .collection-sortby .listbox__button svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.collection-layout .collection-sortby .listbox__button:after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  bottom: 0;
+  right: 11px;
+  margin: auto;
+  border-style: outset;
+  border-width: 4px;
+  border-color: #000 transparent transparent transparent;
+  display: inline-block;
+  border-radius: 1px;
+}
+.collection-layout .listbox__list-wrapper {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.collection-layout .listbox__list-wrapper ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  list-style-type: none;
+}
+.collection-layout .listbox__list-wrapper ul li {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  padding: 7px 16px;
+  background: #fff;
+}

@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GearVN</title>
+    <!-- <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    /> -->
+
+    <!-- bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/post.css" />
+    <link rel="stylesheet" href="./assets/css/product_detail.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/modal.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- GG FONT -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- <div class="top-header"></div> -->
+    <header class="main-header">
+      <div class="container-fluid">
+        <div class="row-header">
+          <div class="coll-header">
+            <div class="main-header--logo">
+              <a href="#">
+                <img
+                  class="logo"
+                  src="https://file.hstatic.net/200000636033/file/logo_fd11946b31524fbe98765f34f3de0628.svg"
+                  alt="logo"
+                />
+              </a>
+              <div class="header-action-item">
+                <div class="header-action_text">
+                  <a href="#" class="header-action__link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/category.svg" alt="category">
+                    </span>
+                    <span class="box-text">
+                      <span>Danh mục</span>
+                    </span>
+                  </a>
+                </div>
+                <!-- <div class="header-action_fullbox"></div> menu sổ xuống -->
+              </div>
+            </div>
+            <div class="main-header--cate">
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <form action="/sreach" class="sreach-box">
+                    <div class="wapper-sreach">
+                      <input
+                        class="input-sreach"
+                        required=""
+                        maxlength="40"
+                        autocomplete="off"
+                        type="text"
+                        size="20"
+                        placeholder="Bạn cần tìm gì?"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn-sreach btn"
+                      id="btn-sreach"
+                    >
+                      <img class="icon" src="./assets/img/search.svg" alt="search">
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                     <img class="icon" src="./assets/img/hotline.svg" alt="hotline">
+                    </span>
+                    <span class="box-text">Hotline <br />1800.6975</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/position.svg" alt="position">
+                    </span>
+                    <span class="box-text"
+                      >Hệ thống <br />
+                      Showroom</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-order.svg" alt="order">
+                    </span>
+                    <span class="box-text">Tra cứu <br />đơn hàng</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="cart.html" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-cart.svg" alt="cart">
+                      <span class="count-holder">
+                        <span class="count">1</span>
+                      </span>
+                    </span>
+                    <span class="box-text">Giỏ <br />hàng</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a
+                    href="#"
+                    class="header-action-link header-action__link"
+                    id="action-account"
+                  >
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-user.svg" alt="user">
+                    </span>
+                    <span class="box-text">Đăng <br />nhập</span>
+                  </a>
+                </div>
+                <!-- <div class="header-action_dropdown account-dropdown">
+                  <div class="header-dropdown-cover not-logged-account-dropdown">
+                    <div class="greeting block--1">
+                      <div class="thing">
+                        <div class="thing-img">
+                          <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_102:3778)"><path d="M3.73909 2.42375L3.62936 2.8938C3.09762 5.15004 2.22365 7.41897 1.02676 9.63384C0.151328 11.2668 -0.175951 13.1255 0.0909153 14.9487C0.400975 17.0265 1.47017 18.9262 3.10282 20.3001C4.73546 21.6741 6.82234 22.4303 8.98149 22.4305H8.98777C10.169 22.4329 11.339 22.2072 12.4298 21.7666C13.5207 21.3259 14.5107 20.6791 15.3425 19.8635L17.1919 18.0604L22.9027 12.5275C23.1619 12.2758 23.3531 11.9658 23.4594 11.625C23.5657 11.2842 23.5838 10.9231 23.5121 10.5739C23.4403 10.2246 23.281 9.89804 23.0482 9.62309C22.8154 9.34815 22.5163 9.13338 22.1776 8.99786L21.9079 8.89069L23.1062 7.72779C23.3136 7.52718 23.4782 7.28876 23.5907 7.02619C23.7031 6.76361 23.7612 6.48205 23.7615 6.19762C23.7619 5.91319 23.7045 5.63148 23.5928 5.36864C23.481 5.1058 23.317 4.86699 23.1101 4.66589L23.0845 4.64097C22.772 4.33651 22.3727 4.13019 21.9384 4.04871L21.7527 4.0144L21.7885 3.83014C21.8143 3.69732 21.8274 3.56247 21.8277 3.4273C21.8282 3.14265 21.7706 2.86073 21.6582 2.59791C21.5457 2.33509 21.3807 2.09662 21.1727 1.89635L21.1408 1.86533C20.7932 1.52722 20.3402 1.31066 19.8526 1.24951C19.365 1.18836 18.8703 1.28607 18.4458 1.52736L18.2467 1.64065L18.1689 1.42912C18.0577 1.13684 17.8826 0.871558 17.6555 0.651661L17.6342 0.630038C17.2172 0.224597 16.6517 -0.00317383 16.062 -0.00317383C15.4723 -0.00317383 14.9068 0.224597 14.4898 0.630038L7.54388 7.38653L8.50776 3.51426C8.58622 3.20813 8.60136 2.88988 8.55231 2.57801C8.50325 2.26614 8.39097 1.96685 8.22199 1.69751C8.05301 1.42818 7.8307 1.19417 7.56795 1.00906C7.3052 0.823961 7.00726 0.691452 6.69142 0.619232C6.37558 0.547012 6.04813 0.536518 5.72808 0.58836C5.40804 0.640203 5.10177 0.753348 4.82706 0.921228C4.55235 1.08911 4.31467 1.30838 4.12782 1.56631C3.94097 1.82424 3.80867 2.11569 3.7386 2.42375H3.73909ZM5.48172 1.79999C5.64955 1.70979 5.83543 1.65592 6.02665 1.64204C6.21788 1.62817 6.40992 1.65463 6.58966 1.71961C6.9019 1.82981 7.16136 2.04815 7.31834 2.33281C7.47533 2.61747 7.5188 2.94843 7.44043 3.26232L6.01442 8.98846C5.94626 9.22349 6.09708 9.45851 6.28077 9.57038C6.3818 9.63055 6.64766 9.74195 6.94157 9.48295L15.2666 1.38776C15.3708 1.28587 15.4948 1.20511 15.6314 1.15017C15.768 1.09522 15.9144 1.06717 16.0622 1.06765C16.2098 1.0672 16.356 1.09517 16.4924 1.14995C16.6288 1.20473 16.7527 1.28523 16.8569 1.38682L16.8777 1.4075C17.0885 1.61275 17.2068 1.89093 17.2068 2.18097C17.2068 2.471 17.0885 2.74918 16.8777 2.95443L11.76 7.93085C11.661 8.03182 11.6065 8.16644 11.6082 8.30596C11.6098 8.44548 11.6676 8.57883 11.769 8.67752C11.8704 8.77621 12.0075 8.83242 12.151 8.83413C12.2945 8.83585 12.433 8.78293 12.5368 8.68669L18.7726 2.62305C18.877 2.52142 19.001 2.44079 19.1375 2.38578C19.274 2.33077 19.4203 2.30246 19.568 2.30246C19.7158 2.30246 19.8621 2.33077 19.9986 2.38578C20.1351 2.44079 20.259 2.52142 20.3635 2.62305L20.3992 2.65125C20.5039 2.75292 20.5869 2.87364 20.6435 3.00652C20.7001 3.1394 20.7293 3.28182 20.7293 3.42566C20.7293 3.5695 20.7001 3.71192 20.6435 3.8448C20.5869 3.97768 20.5039 4.0984 20.3992 4.20007L18.7267 5.81986C17.1823 7.31556 15.4802 8.96355 14.1465 10.2562C14.0917 10.3047 14.0476 10.3635 14.0168 10.4291C13.9859 10.4947 13.9691 10.5656 13.9673 10.6377C13.9654 10.7098 13.9786 10.7815 14.006 10.8484C14.0334 10.9154 14.0745 10.9763 14.1267 11.0274C14.179 11.0786 14.2413 11.1189 14.31 11.146C14.3788 11.173 14.4524 11.1863 14.5265 11.1849C14.6006 11.1836 14.6737 11.1676 14.7413 11.1381C14.809 11.1085 14.8697 11.066 14.92 11.013L14.9238 11.0092C16.1662 9.80588 19.5369 6.54091 20.7212 5.3954C20.9324 5.19126 21.2181 5.07668 21.5159 5.07668C21.8137 5.07668 22.0994 5.19126 22.3106 5.3954L22.3362 5.42032C22.4413 5.52196 22.5247 5.64281 22.5816 5.77591C22.6386 5.90902 22.6679 6.05175 22.6679 6.1959C22.6679 6.34005 22.6386 6.48278 22.5816 6.61588C22.5247 6.74898 22.4413 6.86983 22.3362 6.97148L21.5662 7.71745C19.7858 9.43877 17.4278 11.7232 15.8752 13.2274C15.7722 13.3276 15.7144 13.4634 15.7144 13.6051C15.7144 13.7467 15.7722 13.8825 15.8752 13.9827C15.9261 14.0324 15.9867 14.0718 16.0533 14.0987C16.12 14.1256 16.1914 14.1394 16.2636 14.1394C16.3357 14.1394 16.4072 14.1256 16.4738 14.0987C16.5405 14.0718 16.601 14.0324 16.652 13.9827L20.0575 10.6835L20.5409 10.2172C20.7525 10.0144 21.038 9.90098 21.3352 9.90168C21.6323 9.90239 21.9172 10.0171 22.1279 10.2209C22.3388 10.4263 22.4572 10.7046 22.4572 10.9949C22.4572 11.2851 22.3388 11.5635 22.1279 11.7688L16.4151 17.3051L14.5647 19.1091C13.8347 19.8249 12.9658 20.3927 12.0083 20.7794C11.0509 21.1662 10.024 21.3642 8.98729 21.3621H8.98149C7.08659 21.3618 5.25514 20.698 3.82228 19.4923C2.38941 18.2865 1.45093 16.6194 1.17855 14.7959C0.943867 13.1952 1.23127 11.5633 2.00032 10.1297C3.24167 7.83261 4.15045 5.47625 4.70152 3.13023L4.81125 2.66018C4.85293 2.4784 4.93439 2.30747 5.05008 2.15904C5.16578 2.01061 5.313 1.88815 5.48172 1.79999Z" fill="black"></path><path d="M21.9702 17.1911C21.9299 17.0929 21.8606 17.0086 21.7709 16.9487C21.6813 16.8889 21.5754 16.8563 21.4667 16.855C21.358 16.8538 21.2513 16.8839 21.1602 16.9417C21.0692 16.9994 20.9978 17.0821 20.9551 17.1794C20.6669 17.8309 20.2407 18.416 19.7043 18.8965C19.1679 19.377 18.5333 19.7422 17.842 19.9682C17.7735 19.9904 17.7101 20.0255 17.6555 20.0715C17.6009 20.1175 17.5561 20.1735 17.5238 20.2364C17.4914 20.2992 17.4721 20.3676 17.467 20.4377C17.4618 20.5078 17.4709 20.5781 17.4937 20.6448C17.5166 20.7115 17.5527 20.7731 17.6 20.8262C17.6473 20.8793 17.7049 20.9228 17.7695 20.9543C17.8341 20.9857 17.9045 21.0045 17.9766 21.0095C18.0486 21.0145 18.121 21.0057 18.1896 20.9835C19.0285 20.7097 19.7985 20.2667 20.4492 19.6835C21.0999 19.1002 21.6165 18.39 21.9654 17.5991C21.9939 17.5348 22.009 17.4656 22.0098 17.3956C22.0106 17.3256 21.9972 17.2561 21.9702 17.1911Z" fill="black"></path><path d="M23.6674 17.8925C23.599 17.8641 23.5253 17.8494 23.4509 17.8492C23.3434 17.8495 23.2384 17.8802 23.1487 17.9378C23.0591 17.9953 22.9887 18.0771 22.9462 18.1731C22.559 19.0467 21.9916 19.8337 21.2791 20.4856C20.5666 21.1375 19.7243 21.6403 18.804 21.9631C18.7361 21.9868 18.6737 22.0232 18.6203 22.0704C18.5669 22.1175 18.5235 22.1744 18.4928 22.2378C18.462 22.3012 18.4443 22.3699 18.4408 22.44C18.4373 22.51 18.4481 22.5801 18.4724 22.6461C18.4968 22.7121 18.5342 22.7728 18.5827 22.8248C18.6312 22.8767 18.6897 22.9188 18.7549 22.9488C18.8201 22.9787 18.8908 22.9959 18.9628 22.9993C19.0349 23.0027 19.1069 22.9922 19.1748 22.9686C20.2368 22.5961 21.2089 22.0158 22.031 21.2634C22.853 20.511 23.5076 19.6025 23.9541 18.5943C24.0114 18.4642 24.0134 18.3174 23.9597 18.1859C23.906 18.0544 23.8009 17.9489 23.6674 17.8925Z" fill="black"></path></g><defs><clipPath id="clip0_102:3778"><rect width="24" height="23" fill="white"></rect></clipPath></defs></svg>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <div class="thing-name">Xin chào, vui lòng đăng nhập</div>
+                        </div>
+                      </div>
+                      <div class="actions">
+                        <button class="js-account" data-box="acc-login-box">ĐĂNG NHẬP</button>
+                        <button class="js-account" data-box="acc-register-box">ĐĂNG KÝ</button>
+                      </div>
+                    </div>
+                    <div class="block block--3">
+                      <ul>
+                        <li>
+                          <a href="/pages/faq" class="thing">
+                            <div class="thing-img">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.47305 0 0 4.47266 0 10C0 15.5273 4.47266 20 10 20C15.5273 20 20 15.5273 20 10C20 4.47266 15.5273 0 10 0ZM10 18.6047C5.25547 18.6047 1.39531 14.7445 1.39531 10C1.39531 5.25547 5.25547 1.39531 10 1.39531C14.7445 1.39531 18.6047 5.25547 18.6047 10C18.6047 14.7445 14.7445 18.6047 10 18.6047Z" fill="black"></path><path d="M9.7045 12.6531C9.43777 12.656 9.18298 12.7641 8.99561 12.954C8.80824 13.1438 8.70347 13.4 8.7041 13.6667C8.7041 14.2066 9.13809 14.6804 9.7045 14.6804C9.96247 14.6644 10.2046 14.5506 10.3816 14.3623C10.5586 14.1739 10.6572 13.9252 10.6572 13.6667C10.6572 13.4083 10.5586 13.1595 10.3816 12.9712C10.2046 12.7829 9.96247 12.6691 9.7045 12.6531Z" fill="black"></path><path d="M9.87519 4.97937C8.09824 4.97937 7.28223 6.03406 7.28223 6.74304C7.28223 7.25671 7.7166 7.49343 8.07207 7.49343C8.783 7.49343 8.49316 6.47781 9.83574 6.47781C10.4939 6.47781 11.0205 6.76765 11.0205 7.37312C11.0205 8.08406 10.2834 8.49187 9.84863 8.86062C9.46699 9.18953 8.9666 9.72937 8.9666 10.8614C8.9666 11.5458 9.15097 11.743 9.69081 11.743C10.3357 11.743 10.4674 11.4536 10.4674 11.2036C10.4674 10.5188 10.4803 10.1243 11.2045 9.55828C11.5599 9.28171 12.6787 8.3864 12.6787 7.14929C12.6787 5.91218 11.5603 4.97937 9.87519 4.97937Z" fill="black"></path></svg>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="thing-name">Trợ giúp</div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="sub-header">
+      <div class="container-fluid">
+        <div class="d-lg-block d-xl-block d-none">
+          <ul class="list-submenu list-submenu--desktop">
+            <li class="item-submenu sm-1">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-voucher.svg" alt="voucher">
+                </span>
+                <span class="text">Săn Voucher GEARVN</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-2">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-news.svg" alt="news">
+                </span>
+                <span class="text">Tin công nghệ</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-3">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-video.svg" alt="video">
+                </span>
+                <span class="text">Video</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-4">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-tutorial.svg" alt="tutorial">
+                  </span>
+                <span class="text">Hướng dẫn thanh toán</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-5">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-reply.svg" alt="reply">
+                </span>
+                <span class="text">Hướng dẫn trả góp</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-6">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-security.svg" alt="security">
+                </span>
+                <span class="text">Chính sách bảo hành</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-lg-none d-xl-none">
+          <ul class="list-submenu list-submenu--mobile">
+            <li class="item-submenu sm-1">
+              <a href="#">
+                <span class="text">Laptop</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-2">
+              <a href="#">
+                <span class="text">Laptop Gaming</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-3">
+              <a href="#">
+                <span class="text">PC GVN</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-4">
+              <a href="#">
+                <span class="text">Main, CPU, VGA</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-5">
+              <a href="#">
+                <span class="text">Case, Nguồn, Tản</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-6">
+              <a href="#">
+                <span class="text">Ổ cứng, RAM, Thẻ nhớ</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-7">
+              <a href="#">
+                <span class="text">Apple</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-8">
+              <a href="#">
+                <span class="text">Màn hình</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-9">
+              <a href="#">
+                <span class="text">Bàn phím</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-10">
+              <a href="#">
+                <span class="text">Chuột + Lót chuột</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-11">
+              <a href="#">
+                <span class="text">Tai Nghe - Loa</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-12">
+              <a href="#">
+                <span class="text">Ghế - Bàn</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-13">
+              <a href="#">
+                <span class="text">Phần mềm, mạng</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-14">
+              <a href="#">
+                <span class="text">Phụ kiện</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-15">
+              <a href="#">
+                <span class="text">Thủ thuật - Giải đáp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main posts -->
+    <main class="warpperMain-content">
+      <div class="post-layout">
+        <div class="container-fluid">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb-wrap">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Tất cả bài viết</a></li>
+              </ol>
+            </nav>
+          </div>
+
+          <!-- Main post -->
+          <div class="main-post">
+            <div class="container-fluid">
+              <div class="post-content">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-9 col-xl-9">
+                    <div class="post-list row">
+                      <!-- post item first-->
+                      <div class="col-post col-first">
+                        <div class="post_item">
+                          <div class="post_featured half">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="InDesign là gì? Top những điều cơ bản về Indesign"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_grande.jpg"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_grande.jpg
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_1024x1024.jpg"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_1024x1024.jpg
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_1024x1024.jpg"
+                                    class="lazyloaded"
+                                    alt="InDesign là gì? Top những điều cơ bản về Indesign"
+                                    src="//file.hstatic.net/200000722513/article/oig2_8dcb94adb30646aa91dca9f36b30dd05_1024x1024.jpg"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                            <div class="post_content">
+                              <h3 class="post_title">
+                                <a href="#"
+                                  >InDesign là gì? Top những điều cơ bản về
+                                  Indesign</a
+                                >
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- post item second-->
+                      <div class="col-post col-second">
+                        <div class="post_item">
+                          <div class="post_featured half">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="IP là gì? Cách xem địa chỉ IP trên điện thoại, máy tính"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_large.jpg"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_large.jpg
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_grande.jpg"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_grande.jpg
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_grande.jpg"
+                                    class="lazyloaded"
+                                    alt="IP là gì? Cách xem địa chỉ IP trên điện thoại, máy tính"
+                                    src="//file.hstatic.net/200000722513/article/oig3.cpla4v29s1br5pfl7d_915858581eb74aa3a9aae2553f19ff61_grande.jpg"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                            <div class="post_content">
+                              <h3 class="post_title">
+                                <a href="#"
+                                  >IP là gì? Cách xem địa chỉ IP trên điện
+                                  thoại, máy tính</a
+                                >
+                              </h3>
+                              <div class="post_descr">
+                                <p>
+                                  Trong thế giới kết nối không ngừng, địa chỉ IP
+                                  là chìa khóa quản lý và bảo mật mạng. Từ việc
+                                  hiểu rõ về địa chỉ IP đến cách xem địa chỉ IP
+                                  trên các thiết bị khác nhau là điều không thể
+                                  thiếu.Trong bài viết này, GEARVN sẽ hướng dẫn
+                                  toàn diện giúp bạn nắm bắt thông tin và quản
+                                  lý địa chỉ IP. Địa chỉ IP là gì? Địa chỉ...
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- post item sub-->
+                      <div class="col-post item-sub">
+                        <div class="post_item">
+                          <div class="post_featured coll-l">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    class="ls-is-cached lazyloaded"
+                                    alt="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                                    src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="post_content coll-r">
+                            <h3 class="post_title">
+                              <a href="#"
+                                >Cách tải và chơi game One Piece Fighting Path
+                                trên PC siêu mượt</a
+                              >
+                            </h3>
+                            <div class="post_info">
+                              <span class="post_info_item">
+                                <svg
+                                  width="17"
+                                  height="16"
+                                  viewBox="0 0 17 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8.49968 3.99967C8.32287 3.99967 8.1533 4.06991 8.02827 4.19494C7.90325 4.31996 7.83301 4.48953 7.83301 4.66634V7.33301H6.49968C6.32287 7.33301 6.1533 7.40325 6.02827 7.52827C5.90325 7.65329 5.83301 7.82286 5.83301 7.99967C5.83301 8.17649 5.90325 8.34605 6.02827 8.47108C6.1533 8.5961 6.32287 8.66634 6.49968 8.66634H8.49968C8.67649 8.66634 8.84606 8.5961 8.97108 8.47108C9.09611 8.34605 9.16634 8.17649 9.16634 7.99967V4.66634C9.16634 4.48953 9.09611 4.31996 8.97108 4.19494C8.84606 4.06991 8.67649 3.99967 8.49968 3.99967ZM8.49968 1.33301C7.18114 1.33301 5.8922 1.724 4.79588 2.45654C3.69955 3.18909 2.84506 4.23028 2.34048 5.44845C1.8359 6.66663 1.70387 8.00707 1.96111 9.30028C2.21834 10.5935 2.85328 11.7814 3.78563 12.7137C4.71798 13.6461 5.90587 14.281 7.19908 14.5382C8.49228 14.7955 9.83273 14.6635 11.0509 14.1589C12.2691 13.6543 13.3103 12.7998 14.0428 11.7035C14.7754 10.6071 15.1663 9.31822 15.1663 7.99967C15.1644 6.23216 14.4614 4.5376 13.2116 3.28777C11.9618 2.03795 10.2672 1.33495 8.49968 1.33301ZM8.49968 13.333C7.44484 13.333 6.4137 13.0202 5.53664 12.4342C4.65957 11.8481 3.97599 11.0152 3.57232 10.0407C3.16865 9.06611 3.06304 7.99376 3.26882 6.95919C3.47461 5.92463 3.98256 4.97432 4.72844 4.22844C5.47432 3.48256 6.42463 2.97461 7.4592 2.76882C8.49376 2.56303 9.56612 2.66865 10.5407 3.07232C11.5152 3.47598 12.3481 4.15957 12.9342 5.03663C13.5202 5.91369 13.833 6.94484 13.833 7.99967C13.8312 9.41362 13.2688 10.7691 12.269 11.769C11.2692 12.7688 9.91362 13.3312 8.49968 13.333Z"
+                                    fill="#535353"
+                                  ></path>
+                                </svg>
+                                Thứ Ba 19/03/2024
+                              </span>
+                              <span class="post_info_item author"
+                                >Nguyễn Trường An</span
+                              >
+                            </div>
+                            <div class="post_descr d-none">
+                              <p>
+                                Nếu anh em là Fan của bộ truyện tranh nổi tiếng
+                                ONE PIECE thì không thể nào bỏ qua một tựa game
+                                đang gây sốt thị trường toàn cầu hiện nay như
+                                One Piece Fighting Path, với một thách thức rất
+                                lớn trong việc thỏa mãn những Fan trung thành
+                                của bộ truyện này, nhà phát triển đã tạo ra một
+                                lối chơi thực sự lôi cuốn thỏa mãn mọi...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- post item sub-->
+                      <div class="col-post item-sub">
+                        <div class="post_item">
+                          <div class="post_featured coll-l">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    class="ls-is-cached lazyloaded"
+                                    alt="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                                    src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="post_content coll-r">
+                            <h3 class="post_title">
+                              <a href="#"
+                                >Cách tải và chơi game One Piece Fighting Path
+                                trên PC siêu mượt</a
+                              >
+                            </h3>
+                            <div class="post_info">
+                              <span class="post_info_item">
+                                <svg
+                                  width="17"
+                                  height="16"
+                                  viewBox="0 0 17 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8.49968 3.99967C8.32287 3.99967 8.1533 4.06991 8.02827 4.19494C7.90325 4.31996 7.83301 4.48953 7.83301 4.66634V7.33301H6.49968C6.32287 7.33301 6.1533 7.40325 6.02827 7.52827C5.90325 7.65329 5.83301 7.82286 5.83301 7.99967C5.83301 8.17649 5.90325 8.34605 6.02827 8.47108C6.1533 8.5961 6.32287 8.66634 6.49968 8.66634H8.49968C8.67649 8.66634 8.84606 8.5961 8.97108 8.47108C9.09611 8.34605 9.16634 8.17649 9.16634 7.99967V4.66634C9.16634 4.48953 9.09611 4.31996 8.97108 4.19494C8.84606 4.06991 8.67649 3.99967 8.49968 3.99967ZM8.49968 1.33301C7.18114 1.33301 5.8922 1.724 4.79588 2.45654C3.69955 3.18909 2.84506 4.23028 2.34048 5.44845C1.8359 6.66663 1.70387 8.00707 1.96111 9.30028C2.21834 10.5935 2.85328 11.7814 3.78563 12.7137C4.71798 13.6461 5.90587 14.281 7.19908 14.5382C8.49228 14.7955 9.83273 14.6635 11.0509 14.1589C12.2691 13.6543 13.3103 12.7998 14.0428 11.7035C14.7754 10.6071 15.1663 9.31822 15.1663 7.99967C15.1644 6.23216 14.4614 4.5376 13.2116 3.28777C11.9618 2.03795 10.2672 1.33495 8.49968 1.33301ZM8.49968 13.333C7.44484 13.333 6.4137 13.0202 5.53664 12.4342C4.65957 11.8481 3.97599 11.0152 3.57232 10.0407C3.16865 9.06611 3.06304 7.99376 3.26882 6.95919C3.47461 5.92463 3.98256 4.97432 4.72844 4.22844C5.47432 3.48256 6.42463 2.97461 7.4592 2.76882C8.49376 2.56303 9.56612 2.66865 10.5407 3.07232C11.5152 3.47598 12.3481 4.15957 12.9342 5.03663C13.5202 5.91369 13.833 6.94484 13.833 7.99967C13.8312 9.41362 13.2688 10.7691 12.269 11.769C11.2692 12.7688 9.91362 13.3312 8.49968 13.333Z"
+                                    fill="#535353"
+                                  ></path>
+                                </svg>
+                                Thứ Ba 19/03/2024
+                              </span>
+                              <span class="post_info_item author"
+                                >Nguyễn Trường An</span
+                              >
+                            </div>
+                            <div class="post_descr d-none">
+                              <p>
+                                Nếu anh em là Fan của bộ truyện tranh nổi tiếng
+                                ONE PIECE thì không thể nào bỏ qua một tựa game
+                                đang gây sốt thị trường toàn cầu hiện nay như
+                                One Piece Fighting Path, với một thách thức rất
+                                lớn trong việc thỏa mãn những Fan trung thành
+                                của bộ truyện này, nhà phát triển đã tạo ra một
+                                lối chơi thực sự lôi cuốn thỏa mãn mọi...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- post item sub-->
+                      <div class="col-post item-sub">
+                        <div class="post_item">
+                          <div class="post_featured coll-l">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    class="ls-is-cached lazyloaded"
+                                    alt="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                                    src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="post_content coll-r">
+                            <h3 class="post_title">
+                              <a href="#"
+                                >Cách tải và chơi game One Piece Fighting Path
+                                trên PC siêu mượt</a
+                              >
+                            </h3>
+                            <div class="post_info">
+                              <span class="post_info_item">
+                                <svg
+                                  width="17"
+                                  height="16"
+                                  viewBox="0 0 17 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8.49968 3.99967C8.32287 3.99967 8.1533 4.06991 8.02827 4.19494C7.90325 4.31996 7.83301 4.48953 7.83301 4.66634V7.33301H6.49968C6.32287 7.33301 6.1533 7.40325 6.02827 7.52827C5.90325 7.65329 5.83301 7.82286 5.83301 7.99967C5.83301 8.17649 5.90325 8.34605 6.02827 8.47108C6.1533 8.5961 6.32287 8.66634 6.49968 8.66634H8.49968C8.67649 8.66634 8.84606 8.5961 8.97108 8.47108C9.09611 8.34605 9.16634 8.17649 9.16634 7.99967V4.66634C9.16634 4.48953 9.09611 4.31996 8.97108 4.19494C8.84606 4.06991 8.67649 3.99967 8.49968 3.99967ZM8.49968 1.33301C7.18114 1.33301 5.8922 1.724 4.79588 2.45654C3.69955 3.18909 2.84506 4.23028 2.34048 5.44845C1.8359 6.66663 1.70387 8.00707 1.96111 9.30028C2.21834 10.5935 2.85328 11.7814 3.78563 12.7137C4.71798 13.6461 5.90587 14.281 7.19908 14.5382C8.49228 14.7955 9.83273 14.6635 11.0509 14.1589C12.2691 13.6543 13.3103 12.7998 14.0428 11.7035C14.7754 10.6071 15.1663 9.31822 15.1663 7.99967C15.1644 6.23216 14.4614 4.5376 13.2116 3.28777C11.9618 2.03795 10.2672 1.33495 8.49968 1.33301ZM8.49968 13.333C7.44484 13.333 6.4137 13.0202 5.53664 12.4342C4.65957 11.8481 3.97599 11.0152 3.57232 10.0407C3.16865 9.06611 3.06304 7.99376 3.26882 6.95919C3.47461 5.92463 3.98256 4.97432 4.72844 4.22844C5.47432 3.48256 6.42463 2.97461 7.4592 2.76882C8.49376 2.56303 9.56612 2.66865 10.5407 3.07232C11.5152 3.47598 12.3481 4.15957 12.9342 5.03663C13.5202 5.91369 13.833 6.94484 13.833 7.99967C13.8312 9.41362 13.2688 10.7691 12.269 11.769C11.2692 12.7688 9.91362 13.3312 8.49968 13.333Z"
+                                    fill="#535353"
+                                  ></path>
+                                </svg>
+                                Thứ Ba 19/03/2024
+                              </span>
+                              <span class="post_info_item author"
+                                >Nguyễn Trường An</span
+                              >
+                            </div>
+                            <div class="post_descr d-none">
+                              <p>
+                                Nếu anh em là Fan của bộ truyện tranh nổi tiếng
+                                ONE PIECE thì không thể nào bỏ qua một tựa game
+                                đang gây sốt thị trường toàn cầu hiện nay như
+                                One Piece Fighting Path, với một thách thức rất
+                                lớn trong việc thỏa mãn những Fan trung thành
+                                của bộ truyện này, nhà phát triển đã tạo ra một
+                                lối chơi thực sự lôi cuốn thỏa mãn mọi...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- post item sub-->
+                      <div class="col-post item-sub">
+                        <div class="post_item">
+                          <div class="post_featured coll-l">
+                            <div class="post_thumb">
+                              <a
+                                class="aspect-ratio"
+                                href="#"
+                                title="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                              >
+                                <picture>
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png"
+                                    media="(max-width: 500px)"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_large.png
+                                    "
+                                  />
+                                  <source
+                                    data-srcset="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    srcset="
+                                      //file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png
+                                    "
+                                  />
+                                  <img
+                                    data-src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                    class="ls-is-cached lazyloaded"
+                                    alt="Cách tải và chơi game One Piece Fighting Path trên PC siêu mượt"
+                                    src="//file.hstatic.net/200000722513/article/one-piece-fighting-path-10_8ba98fe4c0234962a7c5784852787269_grande.png"
+                                  />
+                                </picture>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="post_content coll-r">
+                            <h3 class="post_title">
+                              <a href="#"
+                                >Cách tải và chơi game One Piece Fighting Path
+                                trên PC siêu mượt</a
+                              >
+                            </h3>
+                            <div class="post_info">
+                              <span class="post_info_item">
+                                <svg
+                                  width="17"
+                                  height="16"
+                                  viewBox="0 0 17 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8.49968 3.99967C8.32287 3.99967 8.1533 4.06991 8.02827 4.19494C7.90325 4.31996 7.83301 4.48953 7.83301 4.66634V7.33301H6.49968C6.32287 7.33301 6.1533 7.40325 6.02827 7.52827C5.90325 7.65329 5.83301 7.82286 5.83301 7.99967C5.83301 8.17649 5.90325 8.34605 6.02827 8.47108C6.1533 8.5961 6.32287 8.66634 6.49968 8.66634H8.49968C8.67649 8.66634 8.84606 8.5961 8.97108 8.47108C9.09611 8.34605 9.16634 8.17649 9.16634 7.99967V4.66634C9.16634 4.48953 9.09611 4.31996 8.97108 4.19494C8.84606 4.06991 8.67649 3.99967 8.49968 3.99967ZM8.49968 1.33301C7.18114 1.33301 5.8922 1.724 4.79588 2.45654C3.69955 3.18909 2.84506 4.23028 2.34048 5.44845C1.8359 6.66663 1.70387 8.00707 1.96111 9.30028C2.21834 10.5935 2.85328 11.7814 3.78563 12.7137C4.71798 13.6461 5.90587 14.281 7.19908 14.5382C8.49228 14.7955 9.83273 14.6635 11.0509 14.1589C12.2691 13.6543 13.3103 12.7998 14.0428 11.7035C14.7754 10.6071 15.1663 9.31822 15.1663 7.99967C15.1644 6.23216 14.4614 4.5376 13.2116 3.28777C11.9618 2.03795 10.2672 1.33495 8.49968 1.33301ZM8.49968 13.333C7.44484 13.333 6.4137 13.0202 5.53664 12.4342C4.65957 11.8481 3.97599 11.0152 3.57232 10.0407C3.16865 9.06611 3.06304 7.99376 3.26882 6.95919C3.47461 5.92463 3.98256 4.97432 4.72844 4.22844C5.47432 3.48256 6.42463 2.97461 7.4592 2.76882C8.49376 2.56303 9.56612 2.66865 10.5407 3.07232C11.5152 3.47598 12.3481 4.15957 12.9342 5.03663C13.5202 5.91369 13.833 6.94484 13.833 7.99967C13.8312 9.41362 13.2688 10.7691 12.269 11.769C11.2692 12.7688 9.91362 13.3312 8.49968 13.333Z"
+                                    fill="#535353"
+                                  ></path>
+                                </svg>
+                                Thứ Ba 19/03/2024
+                              </span>
+                              <span class="post_info_item author"
+                                >Nguyễn Trường An</span
+                              >
+                            </div>
+                            <div class="post_descr d-none">
+                              <p>
+                                Nếu anh em là Fan của bộ truyện tranh nổi tiếng
+                                ONE PIECE thì không thể nào bỏ qua một tựa game
+                                đang gây sốt thị trường toàn cầu hiện nay như
+                                One Piece Fighting Path, với một thách thức rất
+                                lớn trong việc thỏa mãn những Fan trung thành
+                                của bộ truyện này, nhà phát triển đã tạo ra một
+                                lối chơi thực sự lôi cuốn thỏa mãn mọi...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-3 col-xl-3">
+                    <div class="sidebar-box blog--cate">
+                      <div class="sidebar-box--title">
+                        <h2 class="hot">Chủ đề hot 
+                          <span class="icon" style="right: -7px;width: 45px;">
+                        </h2>
+                      </div>
+                      <div class="sidebar-box--list">
+                        <div class="list-cate">
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/laptop_1f3300ec0cf1455ca3b5199859d9cfd7.jpg" alt="Laptop"></a>
+                            </div>
+                            <h3><a href="#">Laptop</a></h3>
+                          </div>
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/pc_db4c030d7ae1452987001ec502eae18d.jpg" alt="PC"></a>
+                            </div>
+                            <h3><a href="#">PC</a></h3>
+                          </div>
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/man-hinh_2c8cde62363045ed8c46944b1a732458.jpg" alt="Màn hình"></a>
+                            </div>
+                            <h3><a href="#">Màn hình</a></h3>
+                          </div>
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/chuot_c2b601fad5b640898d1666b20bc50b34.jpg" alt="Chuột"></a>
+                            </div>
+                            <h3><a href="#">Chuột</a></h3>
+                          </div>
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/ban_phim_7442ed8375924db8816fcbd97a5180ce.jpg" alt="Bàn phím"></a>
+                            </div>
+                            <h3><a href="#">Bàn phím</a></h3>
+                          </div>
+                          <div class="item-cate">
+                            <div class="img">
+                              <a href="#"><img src="https://file.hstatic.net/200000722513/file/linh_kien_pc_23daa86cd21c44b6bc25bb4bab722cf0.jpg" alt="Linh kiện PC"></a>
+                            </div>
+                            <h3><a href="#">Linh kiện PC</a></h3>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="main-footer--top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Về GEARVN</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a href="/pages/gioi-thieu-gearvn" title="Giới thiệu"
+                        >Giới thiệu</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="https://tuyendung.gearvn.com/" title="Tuyển dụng"
+                        >Tuyển dụng</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Chính sách</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-bao-hanh"
+                        title="Chính sách bảo hành"
+                        >Chính sách bảo hành</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/huong-dan-thanh-toan-gearvn"
+                        title="Chính sách thanh toán"
+                        >Chính sách thanh toán</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-giao-hang"
+                        title="Chính sách giao hàng"
+                        >Chính sách giao hàng</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-bao-mat"
+                        title="Chính sách bảo mật"
+                        >Chính sách bảo mật</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Thông tin</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a
+                        href="/pages/he-thong-showroom-gearvn"
+                        title="Hệ thống cửa hàng"
+                        >Hệ thống cửa hàng</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/he-thong-showroom-gearvn"
+                        title="Trung tâm bảo hành"
+                        >Trung tâm bảo hành</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/trung-tam-ho-tro-tra-cuu-thong-tin-bao-hanh-san-pham-chinh-hang"
+                        title="Tra cứu địa chỉ bảo hành"
+                        >Tra cứu địa chỉ bảo hành</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>TỔNG ĐÀI HỖ TRỢ <span>(8:00 - 21:00)</span></h4>
+                </div>
+                <div class="footer-content">
+                  <div class="list-info">
+                    <p>
+                      <span>CSKH:</span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 1) </span>
+                      </a>
+                    </p>
+                    <p>
+                      <span>Bảo hành: </span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 2) </span> </a
+                      ><br />
+                    </p>
+                    <p>
+                      <span>HTKT: </span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 3) </span>
+                      </a>
+                    </p>
+                    <p></p>
+                    <p>
+                      <span>Email: </span>
+                      <a href="mailto:cskh@gearvn.com">cskh@gearvn.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-lg">
+              <div class="footer-col">
+                <div class="footer-title"><h4>Đơn vị vận chuyển</h4></div>
+                <div class="footer-content">
+                  <ul class="list-ship">
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/ship_1.png?v=4430"
+                        alt="Hình thức vận chuyển 1"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/ship_2.png?v=4643"
+                        alt="Hình thức vận chuyển 2"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/ship_3.png?v=4643"
+                        alt="Hình thức vận chuyển 3"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/ship_4.png?v=4643"
+                        alt="Hình thức vận chuyển 4"
+                        sizes="73px"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-col">
+                <div class="footer-title"><h4>Cách thức thanh toán</h4></div>
+                <div class="footer-content">
+                  <ul class="list-pay">
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_1.png?v=4430"
+                        alt="Phương thức thanh toán 1"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_2.png?v=4643"
+                        alt="Phương thức thanh toán 2"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_3.png?v=4643"
+                        alt="Phương thức thanh toán 3"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_4.png?v=4643"
+                        alt="Phương thức thanh toán 4"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_5.png?v=4643"
+                        alt="Phương thức thanh toán 5"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_6.png?v=4643"
+                        alt="Phương thức thanh toán 6"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_7.png?v=4643"
+                        alt="Phương thức thanh toán 7"
+                        sizes="73px"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="//theme.hstatic.net/200000722513/1001090675/14/pay_8.png?v=4643"
+                        alt="Phương thức thanh toán 8"
+                        sizes="73px"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer--copyright">
+        <div class="container-fluid">
+          <div class="line">
+            <div class="d-flex align-items-lg-center flex-lg-nowrap flex-wrap">
+              <h4 class="footer-title">Kết nối với chúng tôi</h4>
+              <div
+                class="footer-content d-flex align-items-center justify-content-lg-between"
+              >
+                <div class="social-list">
+                  <a
+                    href="https://www.facebook.com/gearvnhcm"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="https://file.hstatic.net/200000636033/file/facebook_1_0e31d70174824ea184c759534430deec.png"
+                      data-src="https://file.hstatic.net/200000636033/file/facebook_1_0e31d70174824ea184c759534430deec.png"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@gearvn.store"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="https://file.hstatic.net/200000722513/file/tiktok-logo_fe1e020f470a4d679064cec31bc676e4.png"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="https://bit.ly/GearvnVideos"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="https://file.hstatic.net/200000636033/file/youtube_1_d8de1f41ca614424aca55aa0c2791684.png"
+                      data-src="https://file.hstatic.net/200000636033/file/youtube_1_d8de1f41ca614424aca55aa0c2791684.png"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/groups/VietnamGamingConner"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="https://file.hstatic.net/200000636033/file/group_1_54d23abd89b74ead806840aa9458661d.png"
+                      data-src="https://file.hstatic.net/200000636033/file/group_1_54d23abd89b74ead806840aa9458661d.png"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                </div>
+                <div class="logo-footer">
+                  <a
+                    rel="nofollow"
+                    target="_blank"
+                    href="http://online.gov.vn/Home/WebDetails/74686"
+                  >
+                    <img
+                      src="//theme.hstatic.net/200000722513/1001090675/14/logo-bct.png?v=4430"
+                      data-src="//theme.hstatic.net/200000722513/1001090675/14/logo-bct.png?v=4430"
+                      alt="Bộ Công Thương"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="d-none">
+              Copyright © 2024
+              <a href="https://gearvn.com"
+                ><strong>Công ty TNHH Thương Mại Gearvn</strong></a
+              >.
+              <a href="https://www.haravan.com/?hchan=gearvn" rel="nofollow"
+                >Powered by Haravan Enterprise</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div
+      class="modal modal-account js-modal-account"
+      id="modal-account"
+      style="padding-right: 17px; background-color: rgba(0, 0, 0, 0.3)"
+      aria-modal="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <!-- Modal đăng nhập -->
+        <div class="modal-content js-modal-content">
+          <div class="modal-header">
+            <h4>ĐĂNG NHẬP HOẶC TẠO TÀI KHOẢN</h4>
+            <button type="button" id="modal-close">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.99586 8L15.5824 2.41348C15.8475 2.14881 15.9967 1.78966 15.997 1.41503C15.9973 1.0404 15.8488 0.680986 15.5841 0.415851C15.3195 0.150716 14.9603 0.00157854 14.5857 0.0012477C14.2111 0.000916852 13.8517 0.14942 13.5865 0.414087L8 6.00061L2.41348 0.414087C2.14834 0.148952 1.78874 0 1.41378 0C1.03882 0 0.679222 0.148952 0.414087 0.414087C0.148952 0.679222 0 1.03882 0 1.41378C0 1.78874 0.148952 2.14834 0.414087 2.41348L6.00061 8L0.414087 13.5865C0.148952 13.8517 0 14.2113 0 14.5862C0 14.9612 0.148952 15.3208 0.414087 15.5859C0.679222 15.851 1.03882 16 1.41378 16C1.78874 16 2.14834 15.851 2.41348 15.5859L8 9.99939L13.5865 15.5859C13.8517 15.851 14.2113 16 14.5862 16C14.9612 16 15.3208 15.851 15.5859 15.5859C15.851 15.3208 16 14.9612 16 14.5862C16 14.2113 15.851 13.8517 15.5859 13.5865L9.99586 8Z"
+                  fill="#6D6E72"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="box-group-account">
+              <!-- Form Đăng Nhập -->
+              <div class="acc-content-box">
+                <form
+                  accept-charset="UTF-8"
+                  action="/account/login"
+                  id="customer_login"
+                  method="post"
+                >
+                  <input
+                    name="form_type"
+                    type="hidden"
+                    value="customer_login"
+                  />
+                  <input name="utf8" type="hidden" value="✓" />
+                  <div class="form-input">
+                    <label
+                      for="login-customer[email]"
+                      class="form__floating-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="login-customer[email]"
+                      class="form-field form-field--text"
+                      name="customer[email]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="login-customer[password]"
+                      class="form__floating-label"
+                      >Mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      id="login-customer[password]"
+                      class="form-field form-field--text"
+                      name="customer[password]"
+                      required="required"
+                      autocomplete="current-password"
+                    />
+                  </div>
+                  <div class="form-input text-right">
+                    <a
+                      href="javanonoscript:void(0);"
+                      data-box="acc-recovery-box"
+                      class="btn-recovery acc-trigger js-acc"
+                      >Quên mật khẩu?</a
+                    >
+                  </div>
+                  <div class="form-input last">
+                    <button
+                      class="btn btn-acc"
+                      type="submit"
+                      id="form_submit-login"
+                    >
+                      ĐĂNG NHẬP
+                    </button>
+                  </div>
+
+                  <input
+                    id="913660598a464442a6c88f2731c2e7b3"
+                    name="g-recaptcha-response"
+                    type="hidden"
+                  />
+                </form>
+              </div>
+              <!-- Form footer -->
+              <div class="form-btn-social text-center">
+                <div class="line"><span>hoặc đăng ký bằng</span></div>
+                <div class="btn-social-list text-center">
+                  <button
+                    type="button"
+                    class="btn-gg button"
+                    id="btn-google-login"
+                  >
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.96 16.5599V20.0159H18.648C18.432 21.5279 16.92 24.3359 12.96 24.3359C9.504 24.3359 6.69601 21.4559 6.69601 17.9999C6.69601 14.5439 9.504 11.6639 12.96 11.6639C14.904 11.6639 16.2 12.5279 16.992 13.2479L19.728 10.5839C17.928 8.92792 15.696 7.91992 12.96 7.91992C7.41601 7.91992 2.88 12.4559 2.88 17.9999C2.88 23.5439 7.41601 28.0799 12.96 28.0799C18.792 28.0799 22.608 23.9759 22.608 18.2159C22.608 17.5679 22.536 17.0639 22.464 16.5599H12.96ZM34.56 16.5599H31.68V13.6799H28.8V16.5599H25.92V19.4399H28.8V22.3199H31.68V19.4399H34.56V16.5599Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <span>Google</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-fb button"
+                    id="btn-facebook-login"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.198 21.5H13.198V13.49H16.802L17.198 9.51H13.198V7.5C13.198 7.23478 13.3034 6.98043 13.4909 6.79289C13.6784 6.60536 13.9328 6.5 14.198 6.5H17.198V2.5H14.198C12.8719 2.5 11.6002 3.02678 10.6625 3.96447C9.72479 4.90215 9.198 6.17392 9.198 7.5V9.51H7.198L6.802 13.49H9.198V21.5Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <span>Facebook</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Form footer Chưa Có Tài khoản -->
+              <div class="form-btn-bottom text-center d-none">
+                <div>
+                  Bạn chưa có tài khoản?
+                  <a
+                    href="#"
+                    data-box="acc-register-box"
+                    class="btn-register acc-trigger js-acc"
+                    >Đăng ký ngay!</a
+                  >
+                </div>
+              </div>
+              <!-- Form Quên Mật Khẩu -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal đăng ký -->
+        <div class="modal-content js-modal-content d-none">
+          <div class="modal-header">
+            <h4>ĐĂNG KÝ TÀI KHOẢN GEARVN</h4>
+            <button type="button" data-dismiss="modal">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.99586 8L15.5824 2.41348C15.8475 2.14881 15.9967 1.78966 15.997 1.41503C15.9973 1.0404 15.8488 0.680986 15.5841 0.415851C15.3195 0.150716 14.9603 0.00157854 14.5857 0.0012477C14.2111 0.000916852 13.8517 0.14942 13.5865 0.414087L8 6.00061L2.41348 0.414087C2.14834 0.148952 1.78874 0 1.41378 0C1.03882 0 0.679222 0.148952 0.414087 0.414087C0.148952 0.679222 0 1.03882 0 1.41378C0 1.78874 0.148952 2.14834 0.414087 2.41348L6.00061 8L0.414087 13.5865C0.148952 13.8517 0 14.2113 0 14.5862C0 14.9612 0.148952 15.3208 0.414087 15.5859C0.679222 15.851 1.03882 16 1.41378 16C1.78874 16 2.14834 15.851 2.41348 15.5859L8 9.99939L13.5865 15.5859C13.8517 15.851 14.2113 16 14.5862 16C14.9612 16 15.3208 15.851 15.5859 15.5859C15.851 15.3208 16 14.9612 16 14.5862C16 14.2113 15.851 13.8517 15.5859 13.5865L9.99586 8Z"
+                  fill="#6D6E72"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="box-group-account">
+              <!-- Form Đăng Ký -->
+              <div class="acc-content-box d-none">
+                <form accept-charset="UTF-8" action="" method="post">
+                  <input name="" type="hidden" value="create_customer" />
+                  <input name="utf8" type="hidden" value="✓" />
+                  <input type="hidden" name="return_to" value="/" />
+                  <div class="form-input">
+                    <label
+                      for="register-customer[name]"
+                      class="form__floating-label"
+                      >Họ và Tên</label
+                    >
+                    <input
+                      type="text"
+                      id="register-customer[name]"
+                      class="form-field form-field--text"
+                      name="customer[name]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="register-customer[email]"
+                      class="form__floating-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="register-customer[email]"
+                      class="form-field form-field--text"
+                      name="customer[email]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="register-customer[password]"
+                      class="form__floating-label"
+                      >Mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      id="register-customer[password]"
+                      class="form-field form-field--text"
+                      name="customer[password]"
+                      required="required"
+                      autocomplete="new-password"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <div class="form-checkbox">
+                      <input
+                        type="checkbox"
+                        id="customer_tags"
+                        value="Có nhận email quảng cáo"
+                        name="customer[tags]"
+                        checked=""
+                      />
+                      <label for="customer_tags" class="title"
+                        >Đăng ký nhận tin khuyến mãi qua Email</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form-input last">
+                    <button
+                      type="submit"
+                      class="btn btn-acc"
+                      id="form_submit-register"
+                    >
+                      TẠO TÀI KHOẢN
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- Form footer -->
+              <div class="form-btn-social text-center">
+                <div class="line"><span>hoặc đăng ký bằng</span></div>
+                <div class="btn-social-list text-center">
+                  <button
+                    type="button"
+                    class="btn-gg button"
+                    id="btn-google-login"
+                  >
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.96 16.5599V20.0159H18.648C18.432 21.5279 16.92 24.3359 12.96 24.3359C9.504 24.3359 6.69601 21.4559 6.69601 17.9999C6.69601 14.5439 9.504 11.6639 12.96 11.6639C14.904 11.6639 16.2 12.5279 16.992 13.2479L19.728 10.5839C17.928 8.92792 15.696 7.91992 12.96 7.91992C7.41601 7.91992 2.88 12.4559 2.88 17.9999C2.88 23.5439 7.41601 28.0799 12.96 28.0799C18.792 28.0799 22.608 23.9759 22.608 18.2159C22.608 17.5679 22.536 17.0639 22.464 16.5599H12.96ZM34.56 16.5599H31.68V13.6799H28.8V16.5599H25.92V19.4399H28.8V22.3199H31.68V19.4399H34.56V16.5599Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <span>Google</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-fb button"
+                    id="btn-facebook-login"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.198 21.5H13.198V13.49H16.802L17.198 9.51H13.198V7.5C13.198 7.23478 13.3034 6.98043 13.4909 6.79289C13.6784 6.60536 13.9328 6.5 14.198 6.5H17.198V2.5H14.198C12.8719 2.5 11.6002 3.02678 10.6625 3.96447C9.72479 4.90215 9.198 6.17392 9.198 7.5V9.51H7.198L6.802 13.49H9.198V21.5Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <span>Facebook</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Form footer Đã Có Tài khoản -->
+              <div class="form-btn-bottom text-center">
+                <div>
+                  Bạn đã có tài khoản?
+                  <a
+                    href="#"
+                    data-box="acc-login-box"
+                    class="btn-register acc-trigger js-acc"
+                    >Đăng nhập!</a
+                  >
+                </div>
+              </div>
+              <!-- Form Quên Mật Khẩu -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      const acctionAccount = document.querySelector("#action-account");
+      const modal = document.querySelector("#modal-account");
+      const modalClose = document.querySelector("#modal-close");
+      const modalContent = document.querySelector(".js-modal-content");
+
+      function showModal() {
+        modal.style.display = "block";
+      }
+      function hideModal() {
+        modal.style.display = "none";
+      }
+      acctionAccount.addEventListener("click", showModal);
+      modalClose.addEventListener("click", hideModal);
+      modal.addEventListener("click", hideModal);
+      modalContent.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

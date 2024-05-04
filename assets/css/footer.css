@@ -1,0 +1,108 @@
+/* Footer */
+.main-footer {
+  background: #ffffff;
+}
+.main-footer .main-footer--top {
+  padding: 32px 0 0;
+}
+.main-footer .footer-col {
+  padding-bottom: 12px;
+}
+.main-footer h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  position: relative;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.main-footer .icon-title {
+  display: none;
+}
+.main-footer .footer-col ul {
+  margin-bottom: 10px;
+}
+.main-footer .footer-col ul li {
+  display: block;
+  padding-bottom: 8px;
+  position: relative;
+  line-height: 22px;
+}
+.main-footer .footer-col ul li a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.main-footer .main-footer--copyright .footer-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 22px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.main-footer h4 span {
+  font-weight: normal;
+}
+.main-footer .main-footer--copyright .line {
+  /* padding: 16px 0; */
+  border-top: 1px solid #ececec;
+}
+.main-footer .main-footer--top .list-info p {
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+.main-footer .main-footer--top .list-info p > span {
+  padding-right: 5px;
+  display: inline-block;
+  width: 70px;
+}
+.main-footer .main-footer--top .list-info a {
+  color: #1982f9;
+  font-weight: 600;
+}
+.main-footer .main-footer--top .list-info a span {
+  color: #111111;
+  font-weight: normal;
+}
+
+.main-footer .main-footer--top .list-pay,
+.main-footer .main-footer--top .list-ship {
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2px;
+}
+.main-footer .main-footer--top .list-pay li,
+.main-footer .main-footer--top .list-ship li {
+  width: calc(100% / 4);
+  display: inline-flex;
+  padding: 2px;
+}
+
+.main-footer .social-list a img {
+  position: relative;
+  height: 32px;
+}
+.main-footer .social-list a {
+  display: inline-flex;
+  margin-right: 12px;
+}
+.main-footer .main-footer--copyright .footer-content {
+  width: 100%;
+  margin-left: 16px;
+}
+.main-footer .main-footer--copyright .logo-footer img {
+  height: 52px;
+}
+.main-footer .main-footer--copyright {
+  padding-top: 16px;
+}
+.main-footer .main-footer--copyright .line {
+  padding: 16px 0;
+  border-top: 1px solid #ececec;
+}
+.main-footer .main-footer--copyright .line p {
+  margin-bottom: 2px;
+  font-size: 12px;
+}

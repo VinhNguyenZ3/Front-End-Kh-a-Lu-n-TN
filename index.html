@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GearVN</title>
+    <!-- <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    /> -->
+
+    <!-- bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/product_detail.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/modal.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- GG FONT -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- <div class="top-header"></div> -->
+    <header class="main-header">
+      <div class="container-fluid">
+        <div class="row-header">
+          <div class="coll-header">
+            <div class="main-header--logo">
+              <a href="#">
+                <img
+                  class="logo"
+                  src="https://file.hstatic.net/200000636033/file/logo_fd11946b31524fbe98765f34f3de0628.svg"
+                  alt="logo"
+                />
+              </a>
+              <div class="header-action-item">
+                <div class="header-action_text">
+                  <a href="#" class="header-action__link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/category.svg" alt="category">
+                    </span>
+                    <span class="box-text">
+                      <span>Danh mục</span>
+                    </span>
+                  </a>
+                </div>
+                <!-- <div class="header-action_fullbox"></div> menu sổ xuống -->
+              </div>
+            </div>
+            <div class="main-header--cate">
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <form action="/sreach" class="sreach-box">
+                    <div class="wapper-sreach">
+                      <input
+                        class="input-sreach"
+                        required=""
+                        maxlength="40"
+                        autocomplete="off"
+                        type="text"
+                        size="20"
+                        placeholder="Bạn cần tìm gì?"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn-sreach btn"
+                      id="btn-sreach"
+                    >
+                      <img class="icon" src="./assets/img/search.svg" alt="search">
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                     <img class="icon" src="./assets/img/hotline.svg" alt="hotline">
+                    </span>
+                    <span class="box-text">Hotline <br />1800.6975</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/position.svg" alt="position">
+                    </span>
+                    <span class="box-text"
+                      >Hệ thống <br />
+                      Showroom</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="#" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-order.svg" alt="order">
+                    </span>
+                    <span class="box-text">Tra cứu <br />đơn hàng</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a href="cart.html" class="header-action-link">
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-cart.svg" alt="cart">
+                      <span class="count-holder">
+                        <span class="count">1</span>
+                      </span>
+                    </span>
+                    <span class="box-text">Giỏ <br />hàng</span>
+                  </a>
+                </div>
+              </div>
+              <div class="header-action-item">
+                <div class="header-action-text">
+                  <a
+                    href="#"
+                    class="header-action-link header-action__link"
+                    id="action-account"
+                  >
+                    <span class="box-icon">
+                      <img class="icon" src="./assets/img/icon-user.svg" alt="user">
+                    </span>
+                    <span class="box-text">Đăng <br />nhập</span>
+                  </a>
+                </div>
+                <!-- <div class="header-action_dropdown account-dropdown">
+                  <div class="header-dropdown-cover not-logged-account-dropdown">
+                    <div class="greeting block--1">
+                      <div class="thing">
+                        <div class="thing-img">
+                          <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_102:3778)"><path d="M3.73909 2.42375L3.62936 2.8938C3.09762 5.15004 2.22365 7.41897 1.02676 9.63384C0.151328 11.2668 -0.175951 13.1255 0.0909153 14.9487C0.400975 17.0265 1.47017 18.9262 3.10282 20.3001C4.73546 21.6741 6.82234 22.4303 8.98149 22.4305H8.98777C10.169 22.4329 11.339 22.2072 12.4298 21.7666C13.5207 21.3259 14.5107 20.6791 15.3425 19.8635L17.1919 18.0604L22.9027 12.5275C23.1619 12.2758 23.3531 11.9658 23.4594 11.625C23.5657 11.2842 23.5838 10.9231 23.5121 10.5739C23.4403 10.2246 23.281 9.89804 23.0482 9.62309C22.8154 9.34815 22.5163 9.13338 22.1776 8.99786L21.9079 8.89069L23.1062 7.72779C23.3136 7.52718 23.4782 7.28876 23.5907 7.02619C23.7031 6.76361 23.7612 6.48205 23.7615 6.19762C23.7619 5.91319 23.7045 5.63148 23.5928 5.36864C23.481 5.1058 23.317 4.86699 23.1101 4.66589L23.0845 4.64097C22.772 4.33651 22.3727 4.13019 21.9384 4.04871L21.7527 4.0144L21.7885 3.83014C21.8143 3.69732 21.8274 3.56247 21.8277 3.4273C21.8282 3.14265 21.7706 2.86073 21.6582 2.59791C21.5457 2.33509 21.3807 2.09662 21.1727 1.89635L21.1408 1.86533C20.7932 1.52722 20.3402 1.31066 19.8526 1.24951C19.365 1.18836 18.8703 1.28607 18.4458 1.52736L18.2467 1.64065L18.1689 1.42912C18.0577 1.13684 17.8826 0.871558 17.6555 0.651661L17.6342 0.630038C17.2172 0.224597 16.6517 -0.00317383 16.062 -0.00317383C15.4723 -0.00317383 14.9068 0.224597 14.4898 0.630038L7.54388 7.38653L8.50776 3.51426C8.58622 3.20813 8.60136 2.88988 8.55231 2.57801C8.50325 2.26614 8.39097 1.96685 8.22199 1.69751C8.05301 1.42818 7.8307 1.19417 7.56795 1.00906C7.3052 0.823961 7.00726 0.691452 6.69142 0.619232C6.37558 0.547012 6.04813 0.536518 5.72808 0.58836C5.40804 0.640203 5.10177 0.753348 4.82706 0.921228C4.55235 1.08911 4.31467 1.30838 4.12782 1.56631C3.94097 1.82424 3.80867 2.11569 3.7386 2.42375H3.73909ZM5.48172 1.79999C5.64955 1.70979 5.83543 1.65592 6.02665 1.64204C6.21788 1.62817 6.40992 1.65463 6.58966 1.71961C6.9019 1.82981 7.16136 2.04815 7.31834 2.33281C7.47533 2.61747 7.5188 2.94843 7.44043 3.26232L6.01442 8.98846C5.94626 9.22349 6.09708 9.45851 6.28077 9.57038C6.3818 9.63055 6.64766 9.74195 6.94157 9.48295L15.2666 1.38776C15.3708 1.28587 15.4948 1.20511 15.6314 1.15017C15.768 1.09522 15.9144 1.06717 16.0622 1.06765C16.2098 1.0672 16.356 1.09517 16.4924 1.14995C16.6288 1.20473 16.7527 1.28523 16.8569 1.38682L16.8777 1.4075C17.0885 1.61275 17.2068 1.89093 17.2068 2.18097C17.2068 2.471 17.0885 2.74918 16.8777 2.95443L11.76 7.93085C11.661 8.03182 11.6065 8.16644 11.6082 8.30596C11.6098 8.44548 11.6676 8.57883 11.769 8.67752C11.8704 8.77621 12.0075 8.83242 12.151 8.83413C12.2945 8.83585 12.433 8.78293 12.5368 8.68669L18.7726 2.62305C18.877 2.52142 19.001 2.44079 19.1375 2.38578C19.274 2.33077 19.4203 2.30246 19.568 2.30246C19.7158 2.30246 19.8621 2.33077 19.9986 2.38578C20.1351 2.44079 20.259 2.52142 20.3635 2.62305L20.3992 2.65125C20.5039 2.75292 20.5869 2.87364 20.6435 3.00652C20.7001 3.1394 20.7293 3.28182 20.7293 3.42566C20.7293 3.5695 20.7001 3.71192 20.6435 3.8448C20.5869 3.97768 20.5039 4.0984 20.3992 4.20007L18.7267 5.81986C17.1823 7.31556 15.4802 8.96355 14.1465 10.2562C14.0917 10.3047 14.0476 10.3635 14.0168 10.4291C13.9859 10.4947 13.9691 10.5656 13.9673 10.6377C13.9654 10.7098 13.9786 10.7815 14.006 10.8484C14.0334 10.9154 14.0745 10.9763 14.1267 11.0274C14.179 11.0786 14.2413 11.1189 14.31 11.146C14.3788 11.173 14.4524 11.1863 14.5265 11.1849C14.6006 11.1836 14.6737 11.1676 14.7413 11.1381C14.809 11.1085 14.8697 11.066 14.92 11.013L14.9238 11.0092C16.1662 9.80588 19.5369 6.54091 20.7212 5.3954C20.9324 5.19126 21.2181 5.07668 21.5159 5.07668C21.8137 5.07668 22.0994 5.19126 22.3106 5.3954L22.3362 5.42032C22.4413 5.52196 22.5247 5.64281 22.5816 5.77591C22.6386 5.90902 22.6679 6.05175 22.6679 6.1959C22.6679 6.34005 22.6386 6.48278 22.5816 6.61588C22.5247 6.74898 22.4413 6.86983 22.3362 6.97148L21.5662 7.71745C19.7858 9.43877 17.4278 11.7232 15.8752 13.2274C15.7722 13.3276 15.7144 13.4634 15.7144 13.6051C15.7144 13.7467 15.7722 13.8825 15.8752 13.9827C15.9261 14.0324 15.9867 14.0718 16.0533 14.0987C16.12 14.1256 16.1914 14.1394 16.2636 14.1394C16.3357 14.1394 16.4072 14.1256 16.4738 14.0987C16.5405 14.0718 16.601 14.0324 16.652 13.9827L20.0575 10.6835L20.5409 10.2172C20.7525 10.0144 21.038 9.90098 21.3352 9.90168C21.6323 9.90239 21.9172 10.0171 22.1279 10.2209C22.3388 10.4263 22.4572 10.7046 22.4572 10.9949C22.4572 11.2851 22.3388 11.5635 22.1279 11.7688L16.4151 17.3051L14.5647 19.1091C13.8347 19.8249 12.9658 20.3927 12.0083 20.7794C11.0509 21.1662 10.024 21.3642 8.98729 21.3621H8.98149C7.08659 21.3618 5.25514 20.698 3.82228 19.4923C2.38941 18.2865 1.45093 16.6194 1.17855 14.7959C0.943867 13.1952 1.23127 11.5633 2.00032 10.1297C3.24167 7.83261 4.15045 5.47625 4.70152 3.13023L4.81125 2.66018C4.85293 2.4784 4.93439 2.30747 5.05008 2.15904C5.16578 2.01061 5.313 1.88815 5.48172 1.79999Z" fill="black"></path><path d="M21.9702 17.1911C21.9299 17.0929 21.8606 17.0086 21.7709 16.9487C21.6813 16.8889 21.5754 16.8563 21.4667 16.855C21.358 16.8538 21.2513 16.8839 21.1602 16.9417C21.0692 16.9994 20.9978 17.0821 20.9551 17.1794C20.6669 17.8309 20.2407 18.416 19.7043 18.8965C19.1679 19.377 18.5333 19.7422 17.842 19.9682C17.7735 19.9904 17.7101 20.0255 17.6555 20.0715C17.6009 20.1175 17.5561 20.1735 17.5238 20.2364C17.4914 20.2992 17.4721 20.3676 17.467 20.4377C17.4618 20.5078 17.4709 20.5781 17.4937 20.6448C17.5166 20.7115 17.5527 20.7731 17.6 20.8262C17.6473 20.8793 17.7049 20.9228 17.7695 20.9543C17.8341 20.9857 17.9045 21.0045 17.9766 21.0095C18.0486 21.0145 18.121 21.0057 18.1896 20.9835C19.0285 20.7097 19.7985 20.2667 20.4492 19.6835C21.0999 19.1002 21.6165 18.39 21.9654 17.5991C21.9939 17.5348 22.009 17.4656 22.0098 17.3956C22.0106 17.3256 21.9972 17.2561 21.9702 17.1911Z" fill="black"></path><path d="M23.6674 17.8925C23.599 17.8641 23.5253 17.8494 23.4509 17.8492C23.3434 17.8495 23.2384 17.8802 23.1487 17.9378C23.0591 17.9953 22.9887 18.0771 22.9462 18.1731C22.559 19.0467 21.9916 19.8337 21.2791 20.4856C20.5666 21.1375 19.7243 21.6403 18.804 21.9631C18.7361 21.9868 18.6737 22.0232 18.6203 22.0704C18.5669 22.1175 18.5235 22.1744 18.4928 22.2378C18.462 22.3012 18.4443 22.3699 18.4408 22.44C18.4373 22.51 18.4481 22.5801 18.4724 22.6461C18.4968 22.7121 18.5342 22.7728 18.5827 22.8248C18.6312 22.8767 18.6897 22.9188 18.7549 22.9488C18.8201 22.9787 18.8908 22.9959 18.9628 22.9993C19.0349 23.0027 19.1069 22.9922 19.1748 22.9686C20.2368 22.5961 21.2089 22.0158 22.031 21.2634C22.853 20.511 23.5076 19.6025 23.9541 18.5943C24.0114 18.4642 24.0134 18.3174 23.9597 18.1859C23.906 18.0544 23.8009 17.9489 23.6674 17.8925Z" fill="black"></path></g><defs><clipPath id="clip0_102:3778"><rect width="24" height="23" fill="white"></rect></clipPath></defs></svg>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <div class="thing-name">Xin chào, vui lòng đăng nhập</div>
+                        </div>
+                      </div>
+                      <div class="actions">
+                        <button class="js-account" data-box="acc-login-box">ĐĂNG NHẬP</button>
+                        <button class="js-account" data-box="acc-register-box">ĐĂNG KÝ</button>
+                      </div>
+                    </div>
+                    <div class="block block--3">
+                      <ul>
+                        <li>
+                          <a href="/pages/faq" class="thing">
+                            <div class="thing-img">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.47305 0 0 4.47266 0 10C0 15.5273 4.47266 20 10 20C15.5273 20 20 15.5273 20 10C20 4.47266 15.5273 0 10 0ZM10 18.6047C5.25547 18.6047 1.39531 14.7445 1.39531 10C1.39531 5.25547 5.25547 1.39531 10 1.39531C14.7445 1.39531 18.6047 5.25547 18.6047 10C18.6047 14.7445 14.7445 18.6047 10 18.6047Z" fill="black"></path><path d="M9.7045 12.6531C9.43777 12.656 9.18298 12.7641 8.99561 12.954C8.80824 13.1438 8.70347 13.4 8.7041 13.6667C8.7041 14.2066 9.13809 14.6804 9.7045 14.6804C9.96247 14.6644 10.2046 14.5506 10.3816 14.3623C10.5586 14.1739 10.6572 13.9252 10.6572 13.6667C10.6572 13.4083 10.5586 13.1595 10.3816 12.9712C10.2046 12.7829 9.96247 12.6691 9.7045 12.6531Z" fill="black"></path><path d="M9.87519 4.97937C8.09824 4.97937 7.28223 6.03406 7.28223 6.74304C7.28223 7.25671 7.7166 7.49343 8.07207 7.49343C8.783 7.49343 8.49316 6.47781 9.83574 6.47781C10.4939 6.47781 11.0205 6.76765 11.0205 7.37312C11.0205 8.08406 10.2834 8.49187 9.84863 8.86062C9.46699 9.18953 8.9666 9.72937 8.9666 10.8614C8.9666 11.5458 9.15097 11.743 9.69081 11.743C10.3357 11.743 10.4674 11.4536 10.4674 11.2036C10.4674 10.5188 10.4803 10.1243 11.2045 9.55828C11.5599 9.28171 12.6787 8.3864 12.6787 7.14929C12.6787 5.91218 11.5603 4.97937 9.87519 4.97937Z" fill="black"></path></svg>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="thing-name">Trợ giúp</div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="sub-header">
+      <div class="container-fluid">
+        <div class="d-lg-block d-xl-block d-none">
+          <ul class="list-submenu list-submenu--desktop">
+            <li class="item-submenu sm-1">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-voucher.svg" alt="voucher">
+                </span>
+                <span class="text">Săn Voucher GEARVN</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-2">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-news.svg" alt="news">
+                </span>
+                <span class="text">Tin công nghệ</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-3">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-video.svg" alt="video">
+                </span>
+                <span class="text">Video</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-4">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-tutorial.svg" alt="tutorial">
+                  </span>
+                <span class="text">Hướng dẫn thanh toán</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-5">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-reply.svg" alt="reply">
+                </span>
+                <span class="text">Hướng dẫn trả góp</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-6">
+              <a href="#">
+                <span class="icon">
+                  <img src="./assets/img/icon-security.svg" alt="security">
+                </span>
+                <span class="text">Chính sách bảo hành</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-lg-none d-xl-none">
+          <ul class="list-submenu list-submenu--mobile">
+            <li class="item-submenu sm-1">
+              <a href="#">
+                <span class="text">Laptop</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-2">
+              <a href="#">
+                <span class="text">Laptop Gaming</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-3">
+              <a href="#">
+                <span class="text">PC GVN</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-4">
+              <a href="#">
+                <span class="text">Main, CPU, VGA</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-5">
+              <a href="#">
+                <span class="text">Case, Nguồn, Tản</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-6">
+              <a href="#">
+                <span class="text">Ổ cứng, RAM, Thẻ nhớ</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-7">
+              <a href="#">
+                <span class="text">Apple</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-8">
+              <a href="#">
+                <span class="text">Màn hình</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-9">
+              <a href="#">
+                <span class="text">Bàn phím</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-10">
+              <a href="#">
+                <span class="text">Chuột + Lót chuột</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-11">
+              <a href="#">
+                <span class="text">Tai Nghe - Loa</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-12">
+              <a href="#">
+                <span class="text">Ghế - Bàn</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-13">
+              <a href="#">
+                <span class="text">Phần mềm, mạng</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-14">
+              <a href="#">
+                <span class="text">Phụ kiện</span>
+              </a>
+            </li>
+            <li class="item-submenu sm-15">
+              <a href="#">
+                <span class="text">Thủ thuật - Giải đáp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Main -->
+    <main class="warpperMain-content" style="margin-top: 0">
+      <!-- Mega Menu và Banner -->
+      <section class="section section-slider">
+        <div class="container-fluid">
+          <div class="slider-wrap">
+            <!-- Mega Menu -->
+            <div class="slider-nav">
+              <div class="sidebar-menu">
+                <nav class="megamenu-nav">
+                  <ul class="megamenu-nav-main">
+                    <li>
+                      <a href="#" class="megamenu-link">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-inside-1_5068_8551" fill="currentcolor">
+                              <path
+                                d="M4.00002 1C3.44774 1 3.00002 1.44772 3.00002 2V8.5C3.00002 9.05229 3.44774 9.5 4.00002 9.5H16C16.5523 9.5 17 9.05229 17 8.5V2C17 1.44772 16.5523 1 16 1H4.00002ZM3.70002 0H10H16.3C16.7774 0 17.2353 0.184374 17.5728 0.512563C17.9104 0.840752 18.1 1.28587 18.1 1.75V8.75C18.1 9.21413 17.9104 9.65925 17.5728 9.98744C17.2353 10.3156 16.7774 10.5 16.3 10.5H3.70002C3.22263 10.5 2.7648 10.3156 2.42723 9.98744C2.08967 9.65925 1.90002 9.21413 1.90002 8.75V1.75C1.90002 1.28587 2.08967 0.840752 2.42723 0.512563C2.7648 0.184374 3.22263 0 3.70002 0Z" />
+                            </mask>
+                            <path
+                              d="M4.00002 1C3.44774 1 3.00002 1.44772 3.00002 2V8.5C3.00002 9.05229 3.44774 9.5 4.00002 9.5H16C16.5523 9.5 17 9.05229 17 8.5V2C17 1.44772 16.5523 1 16 1H4.00002ZM3.70002 0H10H16.3C16.7774 0 17.2353 0.184374 17.5728 0.512563C17.9104 0.840752 18.1 1.28587 18.1 1.75V8.75C18.1 9.21413 17.9104 9.65925 17.5728 9.98744C17.2353 10.3156 16.7774 10.5 16.3 10.5H3.70002C3.22263 10.5 2.7648 10.3156 2.42723 9.98744C2.08967 9.65925 1.90002 9.21413 1.90002 8.75V1.75C1.90002 1.28587 2.08967 0.840752 2.42723 0.512563C2.7648 0.184374 3.22263 0 3.70002 0Z"
+                              fill="currentcolor" />
+                            <path d="M1 12L19 12" stroke="currentcolor" stroke-linecap="round" />
+                          </svg>
+                        </span>
+                        <span class="megamenu-name">Laptop</span>
+                        <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                      <!-- Megamenu sub -->
+                      <div class="megamenu-content" >
+                        <div class="column_5_5">
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Thương hiệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ASUS</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ACER</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >MSI</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >LENOVO</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >DELL</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >HP - Pavilion</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >LG - Gram</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Giá bán</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Dưới 15 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Từ 15 đến 20 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Trên 20 triệu</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >CPU Itel - AMD</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Intel Core i3</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Intel Core i5</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Intel Core i7</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >AMD Ryzen</a
+                            >
+                          </div>
+
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Nhu cầu sử dụng</a
+                            >
+
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Đồ họa - Studio</a
+                            >
+
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Học sinh - Sinh viên</a
+                            >
+
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Mỏng nhẹ cao cấp</a
+                            >
+
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Studio RTX 40 series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Ram laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >SSD laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Ổ cứng di động</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop ASUS</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ASUS OLED Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Vivobook Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Zenbook Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ExpertBook Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ProArt StudioBook Series</a
+                            >
+                          </div>
+
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop ACER</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Aspire Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Swift Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop MSI</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Modern Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Prestige Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Summit Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >CREATOR Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop LENOVO</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ThinkBook Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >IdeaPad Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >IdeaPad Pro Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ThinkPad Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Yoga Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Laptop DELL</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Inspiron Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Vostro Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Latitude Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >XPS Series</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-inside-1_5068_8558" fill="white">
+                                <path
+                                    d="M3.96432 4C3.41203 4 2.96432 4.44772 2.96432 5V11.5C2.96432 12.0523 3.41203 12.5 3.96432 12.5H15.9643C16.5166 12.5 16.9643 12.0523 16.9643 11.5V4H3.96432ZM3.66432 3H9.96432H16.2643C16.7417 3 17.1995 3.18437 17.5371 3.51256C17.8747 3.84075 18.0643 4.28587 18.0643 4.75V11.75C18.0643 12.2141 17.8747 12.6592 17.5371 12.9874C17.1995 13.3156 16.7417 13.5 16.2643 13.5H3.66432C3.18693 13.5 2.72909 13.3156 2.39153 12.9874C2.05396 12.6592 1.86432 12.2141 1.86432 11.75V4.75C1.86432 4.28587 2.05396 3.84075 2.39153 3.51256C2.72909 3.18437 3.18693 3 3.66432 3Z" />
+                            </mask>
+                            <path
+                                d="M3.96432 4C3.41203 4 2.96432 4.44772 2.96432 5V11.5C2.96432 12.0523 3.41203 12.5 3.96432 12.5H15.9643C16.5166 12.5 16.9643 12.0523 16.9643 11.5V4H3.96432ZM3.66432 3H9.96432H16.2643C16.7417 3 17.1995 3.18437 17.5371 3.51256C17.8747 3.84075 18.0643 4.28587 18.0643 4.75V11.75C18.0643 12.2141 17.8747 12.6592 17.5371 12.9874C17.1995 13.3156 16.7417 13.5 16.2643 13.5H3.66432C3.18693 13.5 2.72909 13.3156 2.39153 12.9874C2.05396 12.6592 1.86432 12.2141 1.86432 11.75V4.75C1.86432 4.28587 2.05396 3.84075 2.39153 3.51256C2.72909 3.18437 3.18693 3 3.66432 3Z"
+                                fill="currentcolor" />
+                            <path d="M0.964294 15L18.9643 15" stroke="currentcolor" stroke-linecap="round" />
+                            <path
+                                d="M10.9754 1.87868C11.5771 1.31607 12.3931 1 13.244 1H17.8274C18.2487 1 18.6659 1.0776 19.0551 1.22836C19.4444 1.37913 19.7981 1.6001 20.096 1.87868C20.3939 2.15726 20.6303 2.48797 20.7915 2.85195C20.9527 3.21593 21.0357 3.60603 21.0357 4C21.0357 4.39397 20.9527 4.78407 20.7915 5.14805C20.6303 5.51203 20.3939 5.84274 20.096 6.12132C19.7981 6.3999 19.4444 6.62087 19.0551 6.77164C18.6659 6.9224 18.2487 7 17.8274 7H13.244C12.3931 7 11.5771 6.68393 10.9754 6.12132C10.3737 5.55871 10.0357 4.79565 10.0357 4C10.0357 3.20435 10.3737 2.44129 10.9754 1.87868Z"
+                                fill="white" stroke="white" stroke-width="2" />
+                            <path
+                                d="M10.9754 1.87868C11.5771 1.31607 12.3931 1 13.244 1H17.8274C18.2487 1 18.6659 1.0776 19.0551 1.22836C19.4444 1.37913 19.7981 1.6001 20.096 1.87868C20.3939 2.15726 20.6303 2.48797 20.7915 2.85195C20.9527 3.21593 21.0357 3.60603 21.0357 4C21.0357 4.39397 20.9527 4.78407 20.7915 5.14805C20.6303 5.51203 20.3939 5.84274 20.096 6.12132C19.7981 6.3999 19.4444 6.62087 19.0551 6.77164C18.6659 6.9224 18.2487 7 17.8274 7H13.244C12.3931 7 11.5771 6.68393 10.9754 6.12132C10.3737 5.55871 10.0357 4.79565 10.0357 4C10.0357 3.20435 10.3737 2.44129 10.9754 1.87868Z"
+                                stroke="currentcolor" />
+                            <path
+                                d="M17.625 3.79696C17.5852 3.75567 17.5379 3.72292 17.486 3.70056C17.434 3.67821 17.3782 3.66669 17.322 3.66667C17.2657 3.66665 17.2099 3.67813 17.1579 3.70044C17.1059 3.72276 17.0587 3.75548 17.0189 3.79674C16.9791 3.83799 16.9475 3.88698 16.9259 3.94089C16.9044 3.9948 16.8933 4.05259 16.8932 4.11096C16.8932 4.16932 16.9043 4.22712 16.9258 4.28105C16.9473 4.33498 16.9789 4.38399 17.0187 4.42527C17.099 4.50865 17.208 4.55552 17.3217 4.55556C17.4353 4.5556 17.5443 4.50882 17.6247 4.4255C17.7051 4.34218 17.7503 4.22915 17.7504 4.11127C17.7504 3.9934 17.7053 3.88034 17.625 3.79696Z"
+                                fill="currentcolor" />
+                            <path
+                                d="M17.871 2.91345C17.9105 2.87101 17.9578 2.83715 18.0101 2.81385C18.0624 2.79056 18.1186 2.7783 18.1755 2.77779C18.2324 2.77727 18.2888 2.78852 18.3415 2.81087C18.3942 2.83321 18.442 2.86622 18.4823 2.90795C18.5225 2.94968 18.5543 2.9993 18.5759 3.05392C18.5974 3.10854 18.6083 3.16706 18.6078 3.22608C18.6073 3.28509 18.5955 3.34341 18.573 3.39763C18.5505 3.45186 18.5179 3.5009 18.477 3.5419C18.3961 3.62286 18.2879 3.66766 18.1755 3.66664C18.0631 3.66563 17.9556 3.61889 17.8762 3.53648C17.7967 3.45408 17.7516 3.34261 17.7507 3.22608C17.7497 3.10955 17.7929 2.99728 17.871 2.91345Z"
+                                fill="currentcolor" />
+                            <path
+                                d="M19.343 3.80236C19.3034 3.75991 19.2561 3.72605 19.2039 3.70275C19.1516 3.67946 19.0953 3.6672 19.0384 3.66669C18.9815 3.66618 18.9251 3.67742 18.8724 3.69977C18.8197 3.72212 18.7719 3.75512 18.7317 3.79685C18.6914 3.83858 18.6596 3.8882 18.638 3.94282C18.6165 3.99744 18.6056 4.05597 18.6061 4.11498C18.6066 4.17399 18.6185 4.23231 18.6409 4.28654C18.6634 4.34076 18.696 4.3898 18.737 4.4308C18.8178 4.51176 18.9261 4.55656 19.0384 4.55554C19.1508 4.55453 19.2583 4.50779 19.3377 4.42539C19.4172 4.34298 19.4623 4.23151 19.4633 4.11498C19.4642 3.99845 19.421 3.88618 19.343 3.80236Z"
+                                fill="currentcolor" />
+                            <path
+                                d="M17.8763 4.68562C17.9161 4.64436 17.9634 4.61164 18.0154 4.58933C18.0674 4.56701 18.1231 4.55554 18.1794 4.55556C18.2357 4.55558 18.2914 4.56709 18.3434 4.58945C18.3954 4.6118 18.4426 4.64456 18.4824 4.68584C18.5222 4.72713 18.5537 4.77614 18.5752 4.83007C18.5968 4.884 18.6078 4.94179 18.6078 5.00016C18.6078 5.05852 18.5967 5.11631 18.5751 5.17023C18.5536 5.22414 18.522 5.27313 18.4822 5.31438C18.4018 5.3977 18.2927 5.44449 18.1791 5.44445C18.0654 5.4444 17.9564 5.39754 17.8761 5.31416C17.7957 5.23078 17.7506 5.11772 17.7507 4.99984C17.7507 4.88197 17.7959 4.76894 17.8763 4.68562Z"
+                                fill="currentcolor" />
+                            <path
+                                d="M12.6058 4.55555H11.7487V3.66666H12.6058V2.77777H13.463V3.66666H14.3201V4.55555H13.463V5.44444H12.6058V4.55555Z"
+                                fill="currentcolor" />
+                          </svg>
+                        </span>
+                        <span class="megamenu-name">Laptop Gaming</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                      <div class="megamenu-content" style="display: none">
+                        <div class="column_5_5">
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Thương hiệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ACER / PREDATOR</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ASUS / ROG</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#">MSI</a>
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >LENOVO</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >DELL</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GIGABYTE / AORUS</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#">HP</a>
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Giá bán</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Dưới 20 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Từ 20 đến 25 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Từ 25 đến 30 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Trên 30 triệu</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Gaming cao cấp</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Gaming RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >ACER | PREDATOR</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Nitro Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Aspire Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Predator Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ACER RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >ASUS | ROG Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ROG Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >TUF Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Zephyrus Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ROG Strix G</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >TUF RTX 40 Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ROG RTX 40 Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >ROG Ally</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >MSI Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GF Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GS Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Bravo Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Creator Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >MSI AMD Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >MSI RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >LENOVO Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Legion Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Ideapad Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Lenovo RTX 40 Series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >LOQ series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >DELL Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Dell Gaming G series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Alienware series</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Dell RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >GIGABYTE Gaming</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GIGABYTE G5 | G7</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GIGABYTE AORUS</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GIGABYTE AERO</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GIGABYTE RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Card đồ hoạ</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >GTX 1650</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >RTX 3050 / 3050Ti</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >RTX 3060</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >RTX 3070 / 3080</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >AMD Radeon RX</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >RTX 40 Series</a
+                            >
+                          </div>
+                          <div class="sub-megamenu-item">
+                            <a class="sub-megamenu-item-name" href="#"
+                              >Linh - Phụ kiện Laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Ram laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >SSD laptop</a
+                            >
+                            <a class="sub-megamenu-item-filter" href="#"
+                              >Ổ cứng di động</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="19" width="18" height="10" rx="1" transform="rotate(-90 1 19)"
+                                stroke="currentcolor" />
+                            <path d="M13 3H17C18.1046 3 19 3.89543 19 5V13C19 14.1046 18.1046 15 17 15H13"
+                                stroke="currentcolor" />
+                            <path
+                                d="M16.5 18.5C16.7761 18.5 17 18.2761 17 18C17 17.7239 16.7761 17.5 16.5 17.5V18.5ZM13 18.5H16.5V17.5H13V18.5Z"
+                                fill="currentcolor" />
+                            <circle cx="6" cy="5" r="1" fill="currentcolor" />
+                            <circle cx="6" cy="9" r="1" fill="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">PC GVN</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="19" width="18" height="10" rx="1" transform="rotate(-90 1 19)"
+                                stroke="currentcolor" />
+                            <path d="M13 3H17C18.1046 3 19 3.89543 19 5V13C19 14.1046 18.1046 15 17 15H13"
+                                stroke="currentcolor" />
+                            <path
+                                d="M16.5 18.5C16.7761 18.5 17 18.2761 17 18C17 17.7239 16.7761 17.5 16.5 17.5V18.5ZM13 18.5H16.5V17.5H13V18.5Z"
+                                fill="currentcolor" />
+                            <circle cx="6" cy="5" r="1" fill="currentcolor" />
+                            <circle cx="6" cy="9" r="1" fill="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Main, CPU, VGA</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="19" width="18" height="10" rx="1" transform="rotate(-90 1 19)"
+                                stroke="currentcolor" />
+                            <path d="M13 3H17C18.1046 3 19 3.89543 19 5V13C19 14.1046 18.1046 15 17 15H13"
+                                stroke="currentcolor" />
+                            <path
+                                d="M16.5 18.5C16.7761 18.5 17 18.2761 17 18C17 17.7239 16.7761 17.5 16.5 17.5V18.5ZM13 18.5H16.5V17.5H13V18.5Z"
+                                fill="currentcolor" />
+                            <circle cx="6" cy="5" r="1" fill="currentcolor" />
+                            <circle cx="6" cy="9" r="1" fill="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Case, Nguồn, Tản</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18 1C18.5523 1 19 1.44772 19 2L19 3.5C19 3.5 17.5 3.75127 17.5 5.5C17.5 7.24873 19 7.5 19 7.5L19 9C19 9.55229 18.5523 10 18 10L2 10C1.44772 10 1 9.55228 1 9L1 7.5C1 7.5 2.5 7.27709 2.5 5.5C2.5 3.72291 1 3.5 1 3.5L1 2C1 1.44771 1.44772 0.999999 2 0.999999L18 1Z"
+                                stroke="currentColor" />
+                            <path d="M3 10H17V12C17 12.5523 16.5523 13 16 13H4C3.44772 13 3 12.5523 3 12V10Z"
+                                stroke="currentColor" />
+                            <rect x="5" y="3" width="1" height="5" fill="currentColor" />
+                            <rect x="5" y="10" width="1" height="3" fill="currentColor" />
+                            <rect x="8" y="10" width="1" height="3" fill="currentColor" />
+                            <rect x="11" y="10" width="1" height="3" fill="currentColor" />
+                            <rect x="14" y="10" width="1" height="3" fill="currentColor" />
+                            <rect x="9.5" y="3" width="1" height="5" fill="currentColor" />
+                            <rect x="14" y="3" width="1" height="5" fill="currentColor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Ổ cứng, RAM, Thẻ nhớ</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.0964 8.76235C11.9359 9.46803 11.3612 10.4251 11.3687 11.6949C11.3687 11.7601 11.2478 13.8101 13.5 14.8733C13.0797 16.1469 11.6365 18.9752 9.95708 18.9994C8.98627 18.9994 8.41717 18.3812 7.31803 18.3812C6.18541 18.3812 5.56981 18.9789 4.69943 18.9994C3.03491 19.0497 1.4392 15.9383 0.996566 14.6685C0.665522 13.704 0.5 12.7674 0.5 11.8606C0.5 8.79214 2.54764 7.28395 4.47439 7.25416C5.40801 7.25416 6.59456 7.93564 7.11345 7.93564C7.60443 7.93564 8.94535 7.12382 10.171 7.22065C11.4654 7.31933 12.4474 7.83137 13.0964 8.76235Z"
+                                stroke="currentcolor" />
+                            <path
+                                d="M11.0011 1.00838C11.0296 1.38214 11.1068 2.39558 10.171 3.50806C9.49399 4.29939 8.67196 4.76302 7.77182 4.69413C7.69557 3.73894 8.05079 2.89175 8.65522 2.20655C9.20386 1.5679 10.1672 1.04841 11.0004 1L11.0011 1.00838Z"
+                                stroke="currentcolor" />
+                          </svg>
+                        </span>
+                        <span class="megamenu-name">Apple</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link hover" href="/pages/man-hinh">
+                        <span class="megamenu-icon">
+                          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 1.03226C1.44772 1.03226 1 1.47997 1 2.03226V10.3548C1 10.9071 1.44772 11.3548 2 11.3548H16C16.5523 11.3548 17 10.9071 17 10.3548V2.03226C17 1.47997 16.5523 1.03226 16 1.03226H2ZM2 0H16C16.5304 0 17.0391 0.217511 17.4142 0.604683C17.7893 0.991854 18 1.51697 18 2.06452V10.3226C18 10.8701 17.7893 11.3952 17.4142 11.7824C17.0391 12.1696 16.5304 12.3871 16 12.3871H2C1.46957 12.3871 0.960859 12.1696 0.585786 11.7824C0.210714 11.3952 0 10.8701 0 10.3226V2.06452C0 1.51697 0.210714 0.991854 0.585786 0.604683C0.960859 0.217511 1.46957 0 2 0Z"
+                                fill="currentcolor" />
+                            <rect x="8" y="11.871" width="2" height="4.12903" fill="currentcolor" />
+                            <path d="M5 15.4839L13 15.4839" stroke="currentcolor" stroke-linecap="round" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Màn hình</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="18" height="12" rx="1" stroke="currentcolor" />
+                            <rect x="4" y="8" width="7" height="2" fill="currentcolor" />
+                            <rect x="4" y="4" width="2" height="2" fill="currentcolor" />
+                            <rect x="9" y="4" width="2" height="2" fill="currentcolor" />
+                            <rect x="14" y="4" width="2" height="2" fill="currentcolor" />
+                            <rect x="14" y="8" width="2" height="2" fill="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Bàn phím</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 20" width="18"
+                              height="20" xml:space="preserve">
+                            <style type="text/css">
+                              .st0 {
+                                fill: currentcolor;
+                              }
+                            </style>
+                            <path class="st0" d="M7,19.5L7,19.5c-3.6,0-6.5-3.1-6.5-6.8V7.3c0-3.7,2.9-6.8,6.5-6.8c3.6,0,6.5,3.1,6.5,6.8v5.4&#10;                              C13.5,16.4,10.6,19.5,7,19.5z M7,1.5C4,1.5,1.5,4.1,1.5,7.3v5.4c0,3.2,2.5,5.8,5.5,5.8h0c3,0,5.5-2.6,5.5-5.8V7.3&#10;                              C12.5,4.1,10,1.5,7,1.5z"/>
+                            <path class="st0" d="M7,10L7,10c-0.3,0-0.5-0.2-0.5-0.5v-5C6.5,4.2,6.7,4,7,4h0c0.3,0,0.5,0.2,0.5,0.5v5C7.5,9.8,7.3,10,7,10z"/>
+                          </svg>
+                        </span>
+                        <span class="megamenu-name">Chuột + Lót chuột</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.12753 12.7623C2.35 9.44444 4.96063 9 6.0625 9H6.90625C7.37225 9 7.75 9.38375 7.75 9.85714V16.1429C7.75 16.6162 7.37225 17 6.90625 17H6.0625C3.93277 17 2.19823 15.2822 2.12753 13.1362L1.62188 12.8794C1.43501 12.7844 1.27785 12.6385 1.16801 12.458C1.05817 12.2774 0.999997 12.0694 1 11.8571V10.1429C1 5.08914 5.02609 1 10 1C14.9748 1 19 5.09003 19 10.1429V11.8571C19 12.0694 18.9418 12.2774 18.832 12.458C18.7221 12.6385 18.565 12.7844 18.3781 12.8794L17.8725 13.1362C17.8018 15.2822 16.0672 17 13.9375 17H13.0938C12.6278 17 12.25 16.6162 12.25 16.1429V9.85714C12.25 9.38375 12.6278 9 13.0938 9H13.9375C17.65 9 17.8725 11.6667 17.8725 12.7623"
+                                stroke="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Tai Nghe - Loa</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.42375 13.6057H12.5762" stroke="currentcolor" />
+                            <path
+                                d="M3.4238 10.5999V14.6879C3.4238 15.2402 3.87151 15.6879 4.4238 15.6879H11.5763C12.1286 15.6879 12.5763 15.2402 12.5763 14.6879V10.6C12.5763 9.85202 12.3071 9.12907 11.8179 8.56331C11.706 8.43393 11.6913 8.24664 11.7753 8.09763C12.0408 7.62651 12.5763 6.57918 12.5763 5.79604C12.5763 5.02711 11.5738 3.90031 11.0494 3.36352C10.8544 3.16391 10.7346 2.89476 10.637 2.63335C10.545 2.38712 10.3694 2.04387 10.034 1.631C9.32994 0.76449 6.3573 0.815216 5.80972 1.63104C5.544 2.02692 5.40722 2.37444 5.33682 2.62732C5.26197 2.89614 5.14568 3.16391 4.95069 3.36352C4.42631 3.90031 3.4238 5.02711 3.4238 5.79604C3.4238 6.57918 3.95929 7.62651 4.22477 8.09764C4.30873 8.24664 4.29406 8.43393 4.18219 8.56331C3.693 9.12907 3.4238 9.85201 3.4238 10.5999Z"
+                                stroke="currentcolor" />
+                            <path d="M12.6666 14.6291H13.7406C14.2929 14.6291 14.7406 14.1814 14.7406 13.6291V11.4437"
+                                stroke="currentcolor" />
+                            <path d="M3.33347 14.6291H2.25942C1.70713 14.6291 1.25942 14.1814 1.25942 13.6291V11.4437"
+                                stroke="currentcolor" />
+                            <path d="M15.7777 11.4437H13.7036" stroke="currentcolor" />
+                            <path d="M2.29638 11.4437H0.222336" stroke="currentcolor" />
+                            <path d="M8.00002 15.6906V18.876" stroke="currentcolor" />
+                            <rect x="3.31494" y="18.3146" width="2.11107" height="2.18544" rx="1.05554"
+                                stroke="currentcolor" />
+                            <rect x="10.5741" y="18.3146" width="2.11107" height="2.18544" rx="1.05554"
+                                stroke="currentcolor" />
+                            <path d="M4.37036 18.3452H11.6295" stroke="currentcolor" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Ghế - Bàn</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 16H3.5C1.84315 16 0.5 14.6569 0.5 13V7C0.5 5.34315 1.84315 4 3.5 4H14.5C16.1569 4 17.5 5.34315 17.5 7V13C17.5 14.6569 16.1569 16 14.5 16H14"
+                                stroke="currentcolor" stroke-linecap="round" />
+                            <path d="M14.5 4V3C14.5 1.89543 13.6046 1 12.5 1H5.5C4.39543 1 3.5 1.89543 3.5 3L3.5 4"
+                                stroke="currentcolor" stroke-linecap="round" />
+                            <rect x="4" y="12.5" width="10" height="6" rx="1.5" stroke="currentcolor" />
+                            <path d="M2.5 7L5.5 7" stroke="currentcolor" stroke-linecap="round" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Phần mềm, mạng</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="#">
+                        <span class="megamenu-icon">
+                          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 6H8.90909M6.5 3.5V8.3M10 1C12.0438 1.0352 13.2776 1 14.0909 1C15.7273 1 17.3636 1.4 18.1818 4.2C19 7 19 8.6 19 10.6C19 12.6 17.3636 13 15.7273 13C14.0909 13 13.2285 9.8 10 9.8C6.77145 9.8 5.90909 13 4.27273 13C2.63636 13 1 12.6 1 10.6C1 8.6 1 7 1.81818 4.2C2.63636 1.4 4.27273 1 5.90909 1C6.72236 1 7.95618 1.0352 10 1Z"
+                                stroke="currentcolor" />
+                            <circle cx="13" cy="5" r="1" fill="currentcolor" />
+                            <circle cx="15" cy="7" r="1" fill="currentcolor" />
+                          </svg>
+                        </span>
+                        <span class="megamenu-name">Phụ kiện</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="megamenu-link" href="/blogs/thu-thuat-giai-dap">
+                        <span class="megamenu-icon">
+                          <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 3.5V6M9 3.5C9 3.00555 9.14662 2.5222 9.42133 2.11108C9.69603 1.69995 10.0865 1.37952 10.5433 1.1903C11.0001 1.00108 11.5028 0.951575 11.9877 1.04804C12.4727 1.1445 12.9181 1.3826 13.2678 1.73223C13.6174 2.08187 13.8555 2.52732 13.952 3.01228C14.0484 3.49723 13.9989 3.99989 13.8097 4.45671C13.6205 4.91352 13.3 5.30397 12.8889 5.57867C12.4778 5.85338 11.9945 6 11.5 6H9M9 3.5C9 3.00555 8.85338 2.5222 8.57867 2.11108C8.30397 1.69995 7.91352 1.37952 7.45671 1.1903C6.99989 1.00108 6.49723 0.951575 6.01227 1.04804C5.52732 1.1445 5.08187 1.3826 4.73223 1.73223C4.3826 2.08187 4.1445 2.52732 4.04804 3.01228C3.95157 3.49723 4.00108 3.99989 4.1903 4.45671C4.37952 4.91352 4.69995 5.30397 5.11108 5.57867C5.5222 5.85338 6.00555 6 6.5 6H9"
+                                stroke="currentcolor" stroke-miterlimit="10" stroke-linecap="round" />
+                            <path
+                                d="M15.6667 6H2.33333C1.59695 6 1 6.63959 1 7.42857V9.57143C1 10.3604 1.59695 11 2.33333 11H15.6667C16.403 11 17 10.3604 17 9.57143V7.42857C17 6.63959 16.403 6 15.6667 6Z"
+                                stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16 10.7895V16.9474C16 17.4918 15.7788 18.0139 15.3849 18.3988C14.9911 18.7837 14.457 19 13.9 19H4.1C3.54305 19 3.0089 18.7837 2.61508 18.3988C2.22125 18.0139 2 17.4918 2 16.9474V10.7895M9 6V19"
+                                stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        </span>
+                        <span class="megamenu-name">Thủ thuật - Giải đáp</span>
+                         <span class="megamenu-ic-right">
+                          <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L4.5 4L1.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- Banner -->
+            <div class="slider-banner">
+              <div class="slider-row">
+                <div
+                  id="carouselExampleIndicators"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://file.hstatic.net/200000722513/file/khuyen-mai-slider_8d11698460494236899f88fcbd3568eb.png"
+                        class="d-block w-100"
+                        alt="https://file.hstatic.net/200000722513/file/khuyen-mai-slider_8d11698460494236899f88fcbd3568eb.png"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://file.hstatic.net/200000722513/file/pc-slider_b09b86cba7914c59affaaa41df4d38ec.png"
+                        class="d-block w-100"
+                        alt="https://file.hstatic.net/200000722513/file/pc-slider_b09b86cba7914c59affaaa41df4d38ec.png"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://file.hstatic.net/200000722513/file/gearvn-laptop-asus-vivobook-14-oled-m1405ya-km047w-slider_46dfc8f3a021418fb33af9be6052b315.png"
+                        class="d-block w-100"
+                        alt="https://file.hstatic.net/200000722513/file/gearvn-laptop-asus-vivobook-14-oled-m1405ya-km047w-slider_46dfc8f3a021418fb33af9be6052b315.png"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Laptop gaming bán chạy -->
+      <section class="section section-collection">
+        <div class="container-fluid">
+          <div class="wrapper-content">
+            <!-- Tiêu đề danh sách sản phẩm -->
+            <div class="section-heading">
+              <div class="box-left">
+                <div class="box-header">
+                  <h2 class="heading-title">
+                    <a href="/all_product.html">Laptop gaming bán chạy</a>
+                  </h2>
+                </div>
+                <div class="box-subHeader">
+                  <h3 class="sub-heading-title">
+                    <img src="./assets/img/delivery-icon-red.svg" alt="Miễn phí giao hàng">
+                    Miễn phí giao hàng
+                  </h3>
+                </div>
+              </div>
+              <div class="box-right">
+                <div class="box-cate">
+                  <ul class="cate-list">
+                    <li><a href="#" title="ASUS">ASUS</a></li>
+                    <li><a href="#" title="ACER">ACER</a></li>
+                    <li><a href="#" title="MSI">MSI</a></li>
+                    <li><a href="#" title="LENOVO">LENOVO</a></li>
+                    <li><a href="#" title="GIGABYTE">GIGABYTE</a></li>
+                    <li><a href="#" title="DELL">DELL</a></li>
+                  </ul>
+                </div>
+                <div class="box-link">
+                  <a href="/all_product.html" class="button-more"
+                    >Xem tất cả</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Danh sách các sản phẩm -->
+            <div class="section-content">
+              <!-- Product Box -->
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pro-item-box" style="width: 238px">
+                <div class="pro-block">
+                  <div class="pro-item-img">
+                    <a href="/detail_product.html">
+                      <img
+                        src="https://product.hstatic.net/200000722513/product/ava_5f33a58696534aeca3ce0784606ddae1_medium.png"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="pro-item">
+                    <div class="pro-item-name">
+                      <h3>
+                        <a href="/detail_product.html">
+                          Laptop ASUS Vivobook 14 OLED A1405VA KM257W
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="pro-item-detail">
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/chipset-icon.svg" alt="chipset">
+                        <span>i5-13500H</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/mainboard-icon.svg" alt="Onboard">
+                        <span>Onboard</span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/ram-icon.svg" alt="Ram">
+                        <span>16 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/memory-ssd-icon.svg" alt="SSD">
+                        <span>512 GB </span>
+                      </div>
+                      <div class="pro-item-detail-sub">
+                        <img src="./assets/img/display-icon.svg" alt="Display">
+                        <span>14 inch 2.8K OLED</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-price">
+                      <div class="pro-price--compare">
+                        <del>20.990.000₫</del>
+                      </div>
+                      <div class="pro-price--default">
+                        <span class="pro-price--highlight">17.490.000₫</span>
+                        <span class="pro-label--on-sale">-17%</span>
+                      </div>
+                    </div>
+                    <div class="pro-item-rating">
+                      <span class="number">0.0</span>
+                      <span class="icon">
+                       <img src="./assets/img/star-icon.svg" alt="Star">
+                      </span>
+                      <span class="count">(0 đánh giá)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="main-footer--top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Về GEARVN</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a href="/pages/gioi-thieu-gearvn" title="Giới thiệu"
+                        >Giới thiệu</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="https://tuyendung.gearvn.com/" title="Tuyển dụng"
+                        >Tuyển dụng</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Chính sách</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-bao-hanh"
+                        title="Chính sách bảo hành"
+                        >Chính sách bảo hành</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/huong-dan-thanh-toan-gearvn"
+                        title="Chính sách thanh toán"
+                        >Chính sách thanh toán</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-giao-hang"
+                        title="Chính sách giao hàng"
+                        >Chính sách giao hàng</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/chinh-sach-bao-mat"
+                        title="Chính sách bảo mật"
+                        >Chính sách bảo mật</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>Thông tin</h4>
+                  <span class="icon-title"></span>
+                </div>
+                <div class="footer-content">
+                  <ul>
+                    <li class="item">
+                      <a
+                        href="/pages/he-thong-showroom-gearvn"
+                        title="Hệ thống cửa hàng"
+                        >Hệ thống cửa hàng</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/he-thong-showroom-gearvn"
+                        title="Trung tâm bảo hành"
+                        >Trung tâm bảo hành</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="/pages/trung-tam-ho-tro-tra-cuu-thong-tin-bao-hanh-san-pham-chinh-hang"
+                        title="Tra cứu địa chỉ bảo hành"
+                        >Tra cứu địa chỉ bảo hành</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-lg">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <h4>TỔNG ĐÀI HỖ TRỢ <span>(8:00 - 21:00)</span></h4>
+                </div>
+                <div class="footer-content">
+                  <div class="list-info">
+                    <p>
+                      <span>CSKH:</span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 1) </span>
+                      </a>
+                    </p>
+                    <p>
+                      <span>Bảo hành: </span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 2) </span> </a
+                      ><br />
+                    </p>
+                    <p>
+                      <span>HTKT: </span>
+                      <a href="tel:18006975"
+                        >1800.6975 <span> (nhánh 3) </span>
+                      </a>
+                    </p>
+                    <p></p>
+                    <p>
+                      <span>Email: </span>
+                      <a href="mailto:cskh@gearvn.com">cskh@gearvn.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-lg">
+              <div class="footer-col">
+                <div class="footer-title"><h4>Đơn vị vận chuyển</h4></div>
+                <div class="footer-content">
+                  <ul class="list-ship">
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/ship_1.webp"
+                        alt="Hình thức vận chuyển 1"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/ship_2.webp"
+                        alt="Hình thức vận chuyển 2"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/ship_3.webp"
+                        alt="Hình thức vận chuyển 3"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/ship_4.webp"
+                        alt="Hình thức vận chuyển 4"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-col">
+                <div class="footer-title"><h4>Cách thức thanh toán</h4></div>
+                <div class="footer-content">
+                  <ul class="list-pay">
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_1.webp"
+                        alt="Phương thức thanh toán 1"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_2.webp"
+                        alt="Phương thức thanh toán 2"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_3.webp"
+                        alt="Phương thức thanh toán 3"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_4.webp"
+                        alt="Phương thức thanh toán 4"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_5.webp"
+                        alt="Phương thức thanh toán 5"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_6.webp"
+                        alt="Phương thức thanh toán 6"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_7.webp"
+                        alt="Phương thức thanh toán 7"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        data-sizes="auto"
+                        src="./assets/img/pay_8.webp"
+                        alt="Phương thức thanh toán 8"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer--copyright">
+        <div class="container-fluid">
+          <div class="line">
+            <div class="d-flex align-items-lg-center flex-lg-nowrap flex-wrap">
+              <h4 class="footer-title">Kết nối với chúng tôi</h4>
+              <div
+                class="footer-content d-flex align-items-center justify-content-lg-between"
+              >
+                <div class="social-list">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="./assets/img/facebook-logo.webp"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="./assets/img/tiktok-logo.webp"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="./assets/img/youtube_logo.webp"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <img
+                      data-sizes="auto"
+                      src="./assets/img/group_logo.webp"
+                      alt="Gearvn"
+                      sizes="176px"
+                    />
+                  </a>
+                </div>
+                <div class="logo-footer">
+                  <a
+                    rel="nofollow"
+                    target="_blank"
+                    href="#"
+                  >
+                    <img
+                      src="./assets/img/logo-bct.webp"
+                      alt="Bộ Công Thương"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="">
+              Copyright © 2024
+              <a href="#">
+                <strong>Công ty TNHH Thương Mại Gearvn</strong>
+              </a>.
+              <a href="#" rel="nofollow">
+                Powered by Haravan Enterprise
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div
+      class="modal modal-account js-modal-account"
+      id="modal-account"
+      style="padding-right: 17px; background-color: rgba(0, 0, 0, 0.3)"
+      aria-modal="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <!-- Modal đăng nhập -->
+        <div class="modal-content js-modal-content">
+          <div class="modal-header">
+            <h4>ĐĂNG NHẬP HOẶC TẠO TÀI KHOẢN</h4>
+            <button type="button" id="modal-close">
+              <img src="./assets/img/close-icon.svg" alt="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="box-group-account">
+              <!-- Form Đăng Nhập -->
+              <div class="acc-content-box">
+                <form
+                  accept-charset="UTF-8"
+                  action="/account/login"
+                  id="customer_login"
+                  method="post"
+                >
+                  <input
+                    name="form_type"
+                    type="hidden"
+                    value="customer_login"
+                  />
+                  <input name="utf8" type="hidden" value="✓" />
+                  <div class="form-input">
+                    <label
+                      for="login-customer[email]"
+                      class="form__floating-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="login-customer[email]"
+                      class="form-field form-field--text"
+                      name="customer[email]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="login-customer[password]"
+                      class="form__floating-label"
+                      >Mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      id="login-customer[password]"
+                      class="form-field form-field--text"
+                      name="customer[password]"
+                      required="required"
+                      autocomplete="current-password"
+                    />
+                  </div>
+                  <div class="form-input text-right">
+                    <a
+                      href="javanonoscript:void(0);"
+                      data-box="acc-recovery-box"
+                      class="btn-recovery acc-trigger js-acc"
+                      >Quên mật khẩu?</a
+                    >
+                  </div>
+                  <div class="form-input last">
+                    <button
+                      class="btn btn-acc"
+                      type="submit"
+                      id="form_submit-login"
+                    >
+                      ĐĂNG NHẬP
+                    </button>
+                  </div>
+
+                  <input
+                    id="913660598a464442a6c88f2731c2e7b3"
+                    name="g-recaptcha-response"
+                    type="hidden"
+                  />
+                </form>
+              </div>
+              <!-- Form footer -->
+              <div class="form-btn-social text-center">
+                <div class="line"><span>hoặc đăng ký bằng</span></div>
+                <div class="btn-social-list text-center">
+                  <button
+                    type="button"
+                    class="btn-gg button"
+                    id="btn-google-login"
+                  >
+                    <img src="./assets/img/google-white-icon.svg" alt="Google">
+                    <span>Google</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-fb button"
+                    id="btn-facebook-login"
+                  >
+                    <img src="./assets/img/facebook-white-icon.svg" alt="Facebook">
+                    <span>Facebook</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Form footer Chưa Có Tài khoản -->
+              <div class="form-btn-bottom text-center d-none">
+                <div>
+                  Bạn chưa có tài khoản?
+                  <a
+                    href="#"
+                    data-box="acc-register-box"
+                    class="btn-register acc-trigger js-acc"
+                    >Đăng ký ngay!</a
+                  >
+                </div>
+              </div>
+              <!-- Form Quên Mật Khẩu -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal đăng ký -->
+        <div class="modal-content js-modal-content d-none">
+          <div class="modal-header">
+            <h4>ĐĂNG KÝ TÀI KHOẢN GEARVN</h4>
+            <button type="button" data-dismiss="modal">
+              <img src="./assets/img/close-icon.svg" alt="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="box-group-account">
+              <!-- Form Đăng Ký -->
+              <div class="acc-content-box d-none">
+                <form accept-charset="UTF-8" action="" method="post">
+                  <input name="" type="hidden" value="create_customer" />
+                  <input name="utf8" type="hidden" value="✓" />
+                  <input type="hidden" name="return_to" value="/" />
+                  <div class="form-input">
+                    <label
+                      for="register-customer[name]"
+                      class="form__floating-label"
+                      >Họ và Tên</label
+                    >
+                    <input
+                      type="text"
+                      id="register-customer[name]"
+                      class="form-field form-field--text"
+                      name="customer[name]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="register-customer[email]"
+                      class="form__floating-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="register-customer[email]"
+                      class="form-field form-field--text"
+                      name="customer[email]"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <label
+                      for="register-customer[password]"
+                      class="form__floating-label"
+                      >Mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      id="register-customer[password]"
+                      class="form-field form-field--text"
+                      name="customer[password]"
+                      required="required"
+                      autocomplete="new-password"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <div class="form-checkbox">
+                      <input
+                        type="checkbox"
+                        id="customer_tags"
+                        value="Có nhận email quảng cáo"
+                        name="customer[tags]"
+                        checked=""
+                      />
+                      <label for="customer_tags" class="title"
+                        >Đăng ký nhận tin khuyến mãi qua Email</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form-input last">
+                    <button
+                      type="submit"
+                      class="btn btn-acc"
+                      id="form_submit-register"
+                    >
+                      TẠO TÀI KHOẢN
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- Form footer -->
+              <div class="form-btn-social text-center">
+                <div class="line"><span>hoặc đăng ký bằng</span></div>
+                <div class="btn-social-list text-center">
+                  <button
+                    type="button"
+                    class="btn-gg button"
+                    id="btn-google-login"
+                  >
+                    <img src="./assets/img/google-white-icon.svg" alt="Google">
+                    <span>Google</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-fb button"
+                    id="btn-facebook-login"
+                  >
+                  <img src="./assets/img/facebook-white-icon.svg" alt="Facebook">
+                    <span>Facebook</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Form footer Đã Có Tài khoản -->
+              <div class="form-btn-bottom text-center">
+                <div>
+                  Bạn đã có tài khoản?
+                  <a
+                    href="#"
+                    data-box="acc-login-box"
+                    class="btn-register acc-trigger js-acc"
+                    >Đăng nhập!</a
+                  >
+                </div>
+              </div>
+              <!-- Form Quên Mật Khẩu -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      const acctionAccount = document.querySelector("#action-account");
+      const modal = document.querySelector("#modal-account");
+      const modalClose = document.querySelector("#modal-close");
+      const modalContent = document.querySelector(".js-modal-content");
+
+      function showModal() {
+        modal.style.display = "block";
+      }
+      function hideModal() {
+        modal.style.display = "none";
+      }
+      acctionAccount.addEventListener("click", showModal);
+      modalClose.addEventListener("click", hideModal);
+      modal.addEventListener("click", hideModal);
+      modalContent.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
